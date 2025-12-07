@@ -339,22 +339,15 @@ h2 {
 }
 
 .cert-icon {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
-}
-
-.cert-logo {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    filter: brightness(0) saturate(100%) invert(88%) sepia(85%) saturate(2426%) hue-rotate(47deg) brightness(104%) contrast(101%);
+    filter: grayscale(100%);
     transition: all 0.3s ease;
 }
 
-.cert-item:hover .cert-logo {
-    filter: none;
-    transform: scale(1.1);
+.cert-item:hover .cert-icon {
+    filter: grayscale(0%);
+    transform: scale(1.2);
 }
 
 .cert-link {

@@ -4,410 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Rodríguez | Cybersecurity Analyst</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #0a0a0a;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
-            overflow-x: hidden;
-        }
-
-        /* Scanlines effect */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                0deg,
-                rgba(0, 255, 0, 0.03) 0px,
-                transparent 1px,
-                transparent 2px,
-                rgba(0, 255, 0, 0.03) 3px
-            );
-            pointer-events: none;
-            z-index: 1000;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            border-bottom: 2px solid #00ff00;
-            padding: 1rem 2rem;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #00ff00;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        nav a:hover {
-            text-shadow: 0 0 10px #00ff00;
-        }
-
-        nav a::before {
-            content: '> ';
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        nav a:hover::before {
-            opacity: 1;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .terminal-window {
-            border: 2px solid #00ff00;
-            background: rgba(0, 20, 0, 0.9);
-            padding: 2rem;
-            max-width: 800px;
-            box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
-        }
-
-        .terminal-header {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #00ff00;
-        }
-
-        .terminal-button {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #00ff00;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 20px #00ff00;
-            animation: glitch 3s infinite;
-        }
-
-        @keyframes glitch {
-            0%, 100% { text-shadow: 0 0 20px #00ff00; }
-            50% { text-shadow: 2px 2px 10px #00ff00, -2px -2px 10px #00ff00; }
-        }
-
-        .typing-effect {
-            font-size: 1.2rem;
-            margin: 1rem 0;
-            min-height: 60px;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background: #00ff00;
-            animation: blink 1s infinite;
-            margin-left: 5px;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.8rem 2rem;
-            background: transparent;
-            color: #00ff00;
-            border: 2px solid #00ff00;
-            cursor: pointer;
-            font-family: 'Courier New', monospace;
-            font-size: 1rem;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background: #00ff00;
-            color: #000;
-            box-shadow: 0 0 20px #00ff00;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid #00ff00;
-            padding-left: 1rem;
-            text-shadow: 0 0 10px #00ff00;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .about-text {
-            line-height: 1.8;
-        }
-
-        .stat-box {
-            border: 1px solid #00ff00;
-            padding: 1rem;
-            margin: 0.5rem 0;
-            background: rgba(0, 255, 0, 0.05);
-        }
-
-        .stat-box:hover {
-            background: rgba(0, 255, 0, 0.1);
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #00ff00;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border: 1px solid #00ff00;
-            background: rgba(0, 255, 0, 0.03);
-        }
-
-        .timeline-item::before {
-            content: '▶';
-            position: absolute;
-            left: -2.5rem;
-            color: #00ff00;
-            font-size: 1.2rem;
-        }
-
-        .timeline-item h3 {
-            color: #00ff00;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-date {
-            color: #00ff00;
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-
-        .timeline-item ul {
-            margin-top: 1rem;
-            margin-left: 1.5rem;
-            line-height: 1.6;
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
-            border: 2px solid #00ff00;
-            padding: 1.5rem;
-            background: rgba(0, 255, 0, 0.03);
-            transition: all 0.3s;
-        }
-
-        .skill-category:hover {
-            background: rgba(0, 255, 0, 0.08);
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .skill-tag {
-            display: inline-block;
-            padding: 0.3rem 0.8rem;
-            margin: 0.3rem;
-            border: 1px solid #00ff00;
-            font-size: 0.85rem;
-            background: rgba(0, 255, 0, 0.05);
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            border: 2px solid #00ff00;
-            padding: 1.5rem;
-            background: rgba(0, 255, 0, 0.03);
-            transition: all 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
-        }
-
-        .project-card h3 {
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .project-card p {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        /* Certifications */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .cert-item {
-            border: 2px solid #00ff00;
-            padding: 1.5rem;
-            text-align: center;
-            background: rgba(0, 255, 0, 0.03);
-            transition: all 0.3s;
-        }
-
-        .cert-item:hover {
-            background: rgba(0, 255, 0, 0.08);
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
-        }
-
-        .cert-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            border: 2px solid #00ff00;
-            padding: 1.5rem;
-            text-align: center;
-            background: rgba(0, 255, 0, 0.03);
-            transition: all 0.3s;
-            text-decoration: none;
-            color: #00ff00;
-            display: block;
-        }
-
-        .contact-item:hover {
-            background: #00ff00;
-            color: #000;
-            box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
-        }
-
-        .contact-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 2px solid #00ff00;
-            margin-top: 3rem;
-        }
-
-        /* Matrix Rain Effect */
-        #matrix-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.15;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.5rem; }
-            .about-content { grid-template-columns: 1fr; }
-            nav ul { gap: 1rem; }
-            .typing-effect { font-size: 1rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <canvas id="matrix-canvas"></canvas>
@@ -603,43 +200,43 @@
     <section id="certs">
         <h2>$ cat /etc/certifications</h2>
         <div class="cert-grid">
-            <div class="cert-item">
-                <div class="cert-icon">🛡️</div>
+            <a href="https://www.credly.com/badges/8feb3bd0-2f95-461a-9cda-55e20a6c6f5e/public_url" target="_blank" class="cert-item cert-link">
+                <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1478203603/tp01o8evg4axaa0sjqdc.png" alt="CompTIA Security+" class="cert-logo">
                 <h3>CompTIA Security+</h3>
                 <p>Nov 2025 - Nov 2028</p>
                 <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">Certified</p>
-            </div>
+            </a>
 
             <div class="cert-item">
-                <div class="cert-icon">🔐</div>
+                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/google_logo_icon_171058.png" alt="Google Cybersecurity" class="cert-logo">
                 <h3>Google Cybersecurity</h3>
                 <p>Professional Certificate</p>
                 <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">Completed</p>
             </div>
 
             <div class="cert-item">
-                <div class="cert-icon">⚔️</div>
+                <img src="https://assets.ine.com/certifications/badges/eJPTv2.png" alt="eJPT" class="cert-logo">
                 <h3>eJPT</h3>
                 <p>eLearnSecurity</p>
                 <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">In Progress</p>
             </div>
 
             <div class="cert-item">
-                <div class="cert-icon">☁️</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/187px-Microsoft_Azure_Logo.svg.png" alt="AZ-500" class="cert-logo">
                 <h3>AZ-500</h3>
                 <p>Microsoft Azure Security</p>
                 <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">In Progress</p>
             </div>
 
             <div class="cert-item">
-                <div class="cert-icon">🎓</div>
+                <img src="https://cdn-icons-png.flaticon.com/512/167/167707.png" alt="ASIR" class="cert-logo">
                 <h3>ASIR</h3>
                 <p>Técnico Superior en Administración de Sistemas</p>
                 <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">2023-2025</p>
             </div>
 
             <div class="cert-item">
-                <div class="cert-icon">🔬</div>
+                <img src="https://cdn-icons-png.flaticon.com/512/2913/2913133.png" alt="Ciberseguridad Avanzada" class="cert-logo">
                 <h3>Ciberseguridad Avanzada</h3>
                 <p>Entornos de Tecnologías de la Operación</p>
                 <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">Jun 2025</p>
@@ -681,90 +278,8 @@
         <p style="margin-top: 0.5rem; opacity: 0.7; font-size: 0.85rem;">[ Designed with terminal aesthetics in mind ]</p>
     </footer>
 
-    <script>
-        // Matrix rain effect
-        const canvas = document.getElementById('matrix-canvas');
-        const ctx = canvas.getContext('2d');
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?/~'.split('');
-        const fontSize = 14;
-        const columns = canvas.width / fontSize;
-        const drops = Array(Math.floor(columns)).fill(1);
-
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            ctx.fillStyle = '#00ff00';
-            ctx.font = fontSize + 'px monospace';
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-
-        setInterval(drawMatrix, 35);
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        // Typing effect
-        const texts = [
-            'root@kali:~# whoami',
-            'Cybersecurity Analyst',
-            'SOC Operations Specialist',
-            'Incident Response Expert',
-            'SIEM & EDR Professional'
-        ];
-        let textIndex = 0;
-        let charIndex = 0;
-        const typedTextElement = document.getElementById('typed-text');
-
-        function type() {
-            if (charIndex < texts[textIndex].length) {
-                typedTextElement.textContent += texts[textIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, 100);
-            } else {
-                setTimeout(erase, 2000);
-            }
-        }
-
-        function erase() {
-            if (charIndex > 0) {
-                typedTextElement.textContent = texts[textIndex].substring(0, charIndex - 1);
-                charIndex--;
-                setTimeout(erase, 50);
-            } else {
-                textIndex = (textIndex + 1) % texts.length;
-                setTimeout(type, 500);
-            }
-        }
-
-        setTimeout(type, 1000);
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 

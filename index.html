@@ -13,12 +13,11 @@
         <ul>
             <li><a href="#home">INICIO</a></li>
             <li><a href="#about">SOBRE MÍ</a></li>
+            <li><a href="#education">EDUCACIÓN</a></li>
             <li><a href="#experience">EXPERIENCIA</a></li>
             <li><a href="#skills">HABILIDADES</a></li>
-            <li><a href="#blue-team">BLUE TEAM</a></li>
-            <li><a href="#red-team">RED TEAM</a></li>
+            <li><a href="#projects">PROYECTOS</a></li>
             <li><a href="#certs">CERTIFICACIONES</a></li>
-            <li><a href="#education">EDUCACIÓN</a></li>
             <li><a href="#contact">CONTACTO</a></li>
         </ul>
     </nav>
@@ -39,7 +38,7 @@
                 <div class="cta-buttons">
                     <a href="#contact" class="btn">[ CONTACTO ]</a>
                     <a href="https://github.com/juanrc98/" target="_blank" class="btn">[ GITHUB ]</a>
-                    <a href="#blue-team" class="btn">[ PROYECTOS ]</a>
+                    <a href="#projects" class="btn">[ PROYECTOS ]</a>
                 </div>
             </div>
         </div>
@@ -72,6 +71,27 @@
                 <div class="stat-box">
                     <strong>▶ EN PREPARACIÓN:</strong> eJPT
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>$ cat ~/Educacion/historial.txt</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Técnico Superior en Administración de Sistemas Informáticos y Redes (ASIR)</h3>
+                <span class="timeline-date">2023-2025</span>
+                <p style="margin-top: 1rem; line-height: 1.6;">
+                    Formación especializada en administración de sistemas, redes, seguridad informática y gestión de infraestructuras TI.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Curso Intensivo de Ciberseguridad Andalucía Emplea+</h3>
+                <span class="timeline-date">Oct 2025</span>
+                <p style="margin-top: 1rem; line-height: 1.6;">
+                    Formación intensiva en ciberseguridad aplicada, técnicas de pentesting, análisis de vulnerabilidades y respuesta a incidentes.
+                </p>
             </div>
         </div>
     </section>
@@ -163,47 +183,56 @@
         </div>
     </section>
 
-    <section id="blue-team">
-        <h2>$ cd ~/Blue-Team && ls</h2>
-        <p style="margin-bottom: 2rem; opacity: 0.9;">
-            Proyectos enfocados en defensa, monitorización, detección de amenazas y respuesta a incidentes.
-        </p>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>[ Wazuh SIEM Implementation ]</h3>
-                <p>Implementación completa de Wazuh SIEM en entornos Linux/Windows con reglas personalizadas y scripts de automatización para parseo de logs. Simulación de entorno SOC completo.</p>
-                <a href="https://github.com/juanrc98/wazuh-siem" target="_blank" class="btn" style="margin-top: 1rem;">Ver en GitHub →</a>
-            </div>
+    <section id="projects">
+        <h2>$ cd ~/Proyectos && ls</h2>
+        
+        <!-- Blue Team Section -->
+        <div style="margin-bottom: 4rem;">
+            <h3 style="color: #00ff00; font-size: 1.5rem; margin-bottom: 1.5rem; border-left: 3px solid #00ff00; padding-left: 1rem;">
+                🔵 BLUE TEAM - Defensa y Monitorización
+            </h3>
+            <p style="margin-bottom: 2rem; opacity: 0.9;">
+                Proyectos enfocados en defensa, monitorización, detección de amenazas y respuesta a incidentes.
+            </p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>[ Wazuh SIEM Implementation ]</h3>
+                    <p>Implementación completa de Wazuh SIEM en entornos Linux/Windows con reglas personalizadas y scripts de automatización para parseo de logs. Simulación de entorno SOC completo.</p>
+                    <a href="https://github.com/juanrc98/wazuh-siem" target="_blank" class="btn" style="margin-top: 1rem;">Ver en GitHub →</a>
+                </div>
 
-            <div class="project-card">
-                <h3>[ High Availability Cluster ]</h3>
-                <p>Implementación de clústeres con Pacemaker y Corosync, logrando failover automático en menos de 25 segundos con balanceo de carga MariaDB.</p>
-                <a href="Proyecto-cluster.pdf" target="_blank" class="btn" style="margin-top: 1rem;">Ver Documentación →</a>
-            </div>
+                <div class="project-card">
+                    <h3>[ High Availability Cluster ]</h3>
+                    <p>Implementación de clústeres con Pacemaker y Corosync, logrando failover automático en menos de 25 segundos con balanceo de carga MariaDB.</p>
+                    <a href="Proyecto-cluster.pdf" target="_blank" class="btn" style="margin-top: 1rem;">Ver Documentación →</a>
+                </div>
 
-            <div class="project-card">
-                <h3>[ Anti-Phishing Campaign ]</h3>
-                <p>Diseño y ejecución de campañas de phishing con GoPhish, incluyendo configuración SMTP, análisis de resultados y generación de reportes de concienciación.</p>
-            </div>
+                <div class="project-card">
+                    <h3>[ Anti-Phishing Campaign ]</h3>
+                    <p>Diseño y ejecución de campañas de phishing con GoPhish, incluyendo configuración SMTP, análisis de resultados y generación de reportes de concienciación.</p>
+                </div>
 
-            <div class="project-card">
-                <h3>[ Data Leak Detection System ]</h3>
-                <p>Desarrollo de sistema automatizado para detección de fugas de información utilizando técnicas de OSINT y análisis de metadatos.</p>
-            </div>
+                <div class="project-card">
+                    <h3>[ Data Leak Detection System ]</h3>
+                    <p>Desarrollo de sistema automatizado para detección de fugas de información utilizando técnicas de OSINT y análisis de metadatos.</p>
+                </div>
 
-            <div class="project-card">
-                <h3>[ Log Correlation Scripts ]</h3>
-                <p>Scripts en Bash y Python para automatización de análisis forense de logs y correlación de eventos de seguridad.</p>
+                <div class="project-card">
+                    <h3>[ Log Correlation Scripts ]</h3>
+                    <p>Scripts en Bash y Python para automatización de análisis forense de logs y correlación de eventos de seguridad.</p>
+                </div>
             </div>
         </div>
-    </section>
 
-    <section id="red-team">
-        <h2>$ cat /root/Red-Team/writeups.log</h2>
-        <p style="margin-bottom: 2rem; opacity: 0.9;">
-            Write-ups de máquinas CTF resueltas, documentando el proceso completo de reconocimiento, explotación y escalada de privilegios.
-        </p>
-        <div class="projects-grid">
+        <!-- Red Team Section -->
+        <div>
+            <h3 style="color: #00ff00; font-size: 1.5rem; margin-bottom: 1.5rem; border-left: 3px solid #00ff00; padding-left: 1rem;">
+                🔴 RED TEAM - Ataque y Explotación
+            </h3>
+            <p style="margin-bottom: 2rem; opacity: 0.9;">
+                Write-ups de máquinas CTF resueltas, documentando el proceso completo de reconocimiento, explotación y escalada de privilegios.
+            </p>
+            <div class="projects-grid">
             <div class="project-card" onclick="window.open('1765199442034_write-up.pdf', '_blank')" style="cursor: pointer;">
                 <h3>[ DarkHole:1 CTF ]</h3>
                 <span style="display: inline-block; padding: 0.3rem 0.8rem; margin: 0.5rem 0; font-size: 0.85rem; border: 1px solid #00ff00; background: rgba(0, 255, 0, 0.1);">DIFICULTAD: Media</span>
@@ -241,6 +270,7 @@
                 </p>
                 <div class="btn" style="margin-top: 1rem; display: inline-block;">Ver Write-up →</div>
             </div>
+        </div>
         </div>
     </section>
 

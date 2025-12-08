@@ -16,7 +16,7 @@ function drawMatrix() {
     
     ctx.fillStyle = '#00ff00';
     ctx.font = fontSize + 'px monospace';
-
+    
     for (let i = 0; i < drops.length; i++) {
         const text = chars[Math.floor(Math.random() * chars.length)];
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
@@ -43,6 +43,7 @@ const texts = [
     'Incident Response Expert',
     'SIEM & EDR Professional'
 ];
+
 let textIndex = 0;
 let charIndex = 0;
 const typedTextElement = document.getElementById('typed-text');

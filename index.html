@@ -15,8 +15,10 @@
             <li><a href="#about">SOBRE MÍ</a></li>
             <li><a href="#experience">EXPERIENCIA</a></li>
             <li><a href="#skills">HABILIDADES</a></li>
-            <li><a href="#projects">PROYECTOS</a></li>
+            <li><a href="#blue-team">BLUE TEAM</a></li>
+            <li><a href="#red-team">RED TEAM</a></li>
             <li><a href="#certs">CERTIFICACIONES</a></li>
+            <li><a href="#education">EDUCACIÓN</a></li>
             <li><a href="#contact">CONTACTO</a></li>
         </ul>
     </nav>
@@ -37,7 +39,7 @@
                 <div class="cta-buttons">
                     <a href="#contact" class="btn">[ CONTACTO ]</a>
                     <a href="https://github.com/juanrc98/Cibersecurity-portfolio" target="_blank" class="btn">[ GITHUB ]</a>
-                    <a href="#projects" class="btn">[ PROYECTOS ]</a>
+                    <a href="#blue-team" class="btn">[ PROYECTOS ]</a>
                 </div>
             </div>
         </div>
@@ -68,7 +70,7 @@
                     <strong>▶ CERTIFICACIONES:</strong> CompTIA Security+, Google Cybersecurity
                 </div>
                 <div class="stat-box">
-                    <strong>▶ EN PREPARACIÓN:</strong> eJPT, AZ-500
+                    <strong>▶ EN PREPARACIÓN:</strong> eJPT
                 </div>
             </div>
         </div>
@@ -161,8 +163,11 @@
         </div>
     </section>
 
-    <section id="projects">
-        <h2>$ cd ~/Proyectos && ls</h2>
+    <section id="blue-team">
+        <h2>$ cd ~/Blue-Team && ls</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.9;">
+            Proyectos enfocados en defensa, monitorización, detección de amenazas y respuesta a incidentes.
+        </p>
         <div class="projects-grid">
             <div class="project-card">
                 <h3>[ Wazuh SIEM Implementation ]</h3>
@@ -187,13 +192,54 @@
             </div>
 
             <div class="project-card">
-                <h3>[ ENS Audit Framework ]</h3>
-                <p>Participación en auditorías de ciberseguridad aplicando criterios del Esquema Nacional de Seguridad en infraestructuras críticas.</p>
-            </div>
-
-            <div class="project-card">
                 <h3>[ Log Correlation Scripts ]</h3>
                 <p>Scripts en Bash y Python para automatización de análisis forense de logs y correlación de eventos de seguridad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="red-team">
+        <h2>$ cat /root/Red-Team/writeups.log</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.9;">
+            Write-ups de máquinas CTF resueltas, documentando el proceso completo de reconocimiento, explotación y escalada de privilegios.
+        </p>
+        <div class="projects-grid">
+            <div class="project-card" onclick="window.open('1765199442034_write-up.pdf', '_blank')" style="cursor: pointer;">
+                <h3>[ DarkHole:1 CTF ]</h3>
+                <span style="display: inline-block; padding: 0.3rem 0.8rem; margin: 0.5rem 0; font-size: 0.85rem; border: 1px solid #00ff00; background: rgba(0, 255, 0, 0.1);">DIFICULTAD: Media</span>
+                <p style="margin: 1rem 0;">
+                    Explotación completa de máquina vulnerable incluyendo enumeración web, SQL injection, escalada de privilegios mediante binarios SUID y análisis de servicios internos.
+                </p>
+                <div style="margin: 1rem 0;">
+                    <span class="skill-tag">Nmap</span>
+                    <span class="skill-tag">SQLi</span>
+                    <span class="skill-tag">SUID Exploitation</span>
+                    <span class="skill-tag">Password Cracking</span>
+                    <span class="skill-tag">Linux PrivEsc</span>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                    <strong>Técnicas:</strong> Reconocimiento de puertos, inyección SQL para bypass de autenticación, cracking de hashes con John, explotación de binarios SUID y análisis de capabilities.
+                </p>
+                <div class="btn" style="margin-top: 1rem; display: inline-block;">Ver Write-up →</div>
+            </div>
+
+            <div class="project-card" onclick="window.open('write-up-psycho.pdf', '_blank')" style="cursor: pointer;">
+                <h3>[ Psycho:1 CTF ]</h3>
+                <span style="display: inline-block; padding: 0.3rem 0.8rem; margin: 0.5rem 0; font-size: 0.85rem; border: 1px solid #00ff00; background: rgba(0, 255, 0, 0.1);">DIFICULTAD: Media</span>
+                <p style="margin: 1rem 0;">
+                    Máquina que requiere enumeración exhaustiva, explotación de vulnerabilidades web (LFI), análisis de logs del sistema y técnicas avanzadas de escalada de privilegios mediante scripts personalizados.
+                </p>
+                <div style="margin: 1rem 0;">
+                    <span class="skill-tag">Web Enumeration</span>
+                    <span class="skill-tag">LFI</span>
+                    <span class="skill-tag">Log Analysis</span>
+                    <span class="skill-tag">Custom Scripts</span>
+                    <span class="skill-tag">PrivEsc</span>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                    <strong>Técnicas:</strong> Fuzzing de directorios, explotación de Local File Inclusion, análisis de logs para obtener credenciales, y escalada de privilegios mediante scripts con permisos especiales.
+                </p>
+                <div class="btn" style="margin-top: 1rem; display: inline-block;">Ver Write-up →</div>
             </div>
         </div>
     </section>
@@ -201,12 +247,12 @@
     <section id="certs">
         <h2>$ cat /etc/Mis-certificaciones</h2>
         <div class="cert-grid">
-            <a href="https://www.credly.com/badges/ad3204d9-e927-4383-8dc3-4a181659a195/linked_in_profile" target="_blank" class="cert-item cert-link">
+            <div class="cert-item cert-link" style="cursor: pointer;" onclick="window.open('https://www.credly.com/badges/ad3204d9-e927-4383-8dc3-4a181659a195/linked_in_profile', '_blank')">
                 <div class="cert-icon">🛡️</div>
                 <h3>CompTIA Security+</h3>
                 <p>Nov 2025 - Nov 2028</p>
                 <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">✅ Completed</p>
-            </a>
+            </div>
 
             <div class="cert-item">
                 <div class="cert-icon">🔐</div>
@@ -218,314 +264,29 @@
             <div class="cert-item">
                 <div class="cert-icon">⚔️</div>
                 <h3>eJPT</h3>
-                <p>eLearnSecurity</p>
+                <p>eLearnSecurity Junior Penetration Tester</p>
                 <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">🔄 In Progress</p>
             </div>
-
-            <div class="cert-item">
-                <div class="cert-icon">☁️</div>
-                <h3>AZ-500</h3>
-                <p>Microsoft Azure Security</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">🔄 In Progress</p>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon">🎓</div>
-                <h3>ASIR</h3>
-                <p>Técnico Superior en Administración de Sistemas</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">2023-2025</p>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon">🔬</div>
-                <h3>Ciberseguridad Avanzada</h3>
-                <p>Entornos de Tecnologías de la Operación</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">Jun 2025</p>
-            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>$ echo "contacto"</h2>
-        <div class="contact-grid">
-            <a href="mailto:juanrodcas98@gmail.com" class="contact-item">
-                <div class="contact-icon">📧</div>
-                <div>EMAIL</div>
-                <div style="font-size: 0.85rem; margin-top: 0.5rem;">juanrodcas98@gmail.com</div>
-            </a>
-
-            <a href="tel:+34640103050" class="contact-item">
-                <div class="contact-icon">📱</div>
-                <div>TELÉFONO</div>
-                <div style="font-size: 0.85rem; margin-top: 0.5rem;">+34 640 103 050</div>
-            </a>
-
-            <a href="https://github.com/juanrc98" target="_blank" class="contact-item">
-                <div class="contact-icon">💻</div>
-                <div>GITHUB</div>
-                <div style="font-size: 0.85rem; margin-top: 0.5rem;">@juanrc98</div>
-            </a>
-
-            <a href="https://www.linkedin.com/in/juan-rodriguez-castellano/" target="_blank" class="contact-item">
-                <div class="contact-icon">🔗</div>
-                <div>LINKEDIN</div>
-                <div style="font-size: 0.85rem; margin-top: 0.5rem;">Juan Rodríguez</div>
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <p>root@cybersec:~# Juan Rodríguez © 2025 | Cybersecurity Portfolio</p>
-        <p style="margin-top: 0.5rem; opacity: 0.7; font-size: 0.85rem;">[ Designed with terminal aesthetics in mind ]</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Rodríguez | Cybersecurity Analyst</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <canvas id="matrix-canvas"></canvas>
-
-    <nav>
-        <ul>
-            <li><a href="#home">INICIO</a></li>
-            <li><a href="#about">SOBRE MÍ</a></li>
-            <li><a href="#experience">EXPERIENCIA</a></li>
-            <li><a href="#skills">HABILIDADES</a></li>
-            <li><a href="#projects">PROYECTOS</a></li>
-            <li><a href="#certs">CERTIFICACIONES</a></li>
-            <li><a href="#contact">CONTACTO</a></li>
-        </ul>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="terminal-window">
-            <div class="terminal-header">
-                <div class="terminal-button"></div>
-                <div class="terminal-button"></div>
-                <div class="terminal-button"></div>
-            </div>
-            <div>
-                <h1>JUAN RODRÍGUEZ CASTELLANO</h1>
-                <div class="typing-effect">
-                    <span id="typed-text"></span><span class="cursor"></span>
-                </div>
-                <p style="margin: 1rem 0; opacity: 0.8;">SOC Analyst | Incident Response | SIEM & EDR Specialist</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn">[ CONTACTO ]</a>
-                    <a href="https://github.com/juanrc98/Cibersecurity-portfolio" target="_blank" class="btn">[ GITHUB ]</a>
-                    <a href="#projects" class="btn">[ PROYECTOS ]</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>$ cat Sobre-mi.txt</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p style="margin-bottom: 1rem;">
-                    Técnico Superior en Administración de Sistemas Informáticos en Red, especializado en <strong>ciberseguridad</strong> e infraestructuras críticas.
-                </p>
-                <p style="margin-bottom: 1rem;">
-                    Experiencia práctica en entornos <strong>SOC 24/7</strong> con monitorización, respuesta a incidentes y análisis forense. Competente en administración de sistemas Linux/Windows y clústeres de alta disponibilidad.
-                </p>
-                <p>
-                    Mi enfoque combina herramientas especializadas con automatización mediante scripting para optimizar la detección, respuesta y gestión de infraestructuras.
-                </p>
-            </div>
-            <div>
-                <div class="stat-box">
-                    <strong>▶ UBICACIÓN:</strong> Córdoba, España
-                </div>
-                <div class="stat-box">
-                    <strong>▶ IDIOMAS:</strong> Español (Nativo) | Inglés (B2)
-                </div>
-                <div class="stat-box">
-                    <strong>▶ CERTIFICACIONES:</strong> CompTIA Security+, Google Cybersecurity
-                </div>
-                <div class="stat-box">
-                    <strong>▶ EN PREPARACIÓN:</strong> eJPT, AZ-500
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>$ grep -r "experiencia" ./career</h2>
+    <section id="education">
+        <h2>$ cat ~/Educacion/historial.txt</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <h3>Analista SOC - IaaS365</h3>
-                <span class="timeline-date">Mar 2025 - Jun 2025 | Córdoba, España (Híbrido)</span>
-                <ul>
-                    <li>Monitorización 24/7 con <strong>LogPoint</strong> y <strong>Wazuh SIEM</strong>, optimizando reglas de correlación</li>
-                    <li>Respuesta a incidentes con <strong>Trend Micro EDR</strong> y <strong>Cynet XDR</strong></li>
-                    <li>Implementación completa de campañas de phishing con <strong>GoPhish</strong></li>
-                    <li>Auditorías bajo <strong>Esquema Nacional de Seguridad (ENS)</strong></li>
-                    <li>Análisis forense y threat hunting básico con IOCs</li>
-                    <li>Automatización de tareas con Python y Bash</li>
-                </ul>
+                <h3>Técnico Superior en Administración de Sistemas Informáticos y Redes (ASIR)</h3>
+                <span class="timeline-date">2023-2025</span>
+                <p style="margin-top: 1rem; line-height: 1.6;">
+                    Formación especializada en administración de sistemas, redes, seguridad informática y gestión de infraestructuras TI.
+                </p>
             </div>
 
             <div class="timeline-item">
-                <h3>Técnico Informático - Fersoft Informática</h3>
-                <span class="timeline-date">Oct 2025 - Dic 2025 | Córdoba, España</span>
-                <ul>
-                    <li>Soporte técnico y mantenimiento de sistemas</li>
-                    <li>Resolución de incidencias hardware y software</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>$ ls -la /Mis-habilidades/</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>[SIEM & Monitoring]</h3>
-                <div class="skill-tag">LogPoint</div>
-                <div class="skill-tag">Wazuh</div>
-                <div class="skill-tag">Splunk</div>
-                <div class="skill-tag">IBM QRadar</div>
-                <div class="skill-tag">Prometheus</div>
-                <div class="skill-tag">Grafana</div>
-                <div class="skill-tag">Nagios</div>
-            </div>
-
-            <div class="skill-category">
-                <h3>[EDR/XDR & Response]</h3>
-                <div class="skill-tag">Trend Micro</div>
-                <div class="skill-tag">Cynet</div>
-                <div class="skill-tag">Incident Response</div>
-                <div class="skill-tag">Threat Hunting</div>
-                <div class="skill-tag">Análisis Forense</div>
-            </div>
-
-            <div class="skill-category">
-                <h3>[Networking & Security]</h3>
-                <div class="skill-tag">pfSense</div>
-                <div class="skill-tag">Firewall</div>
-                <div class="skill-tag">VPN</div>
-                <div class="skill-tag">IDS/IPS</div>
-                <div class="skill-tag">Active Directory</div>
-                <div class="skill-tag">LDAP</div>
-            </div>
-
-            <div class="skill-category">
-                <h3>[Automation & Scripting]</h3>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">Bash</div>
-                <div class="skill-tag">SQL</div>
-                <div class="skill-tag">PowerShell</div>
-            </div>
-
-            <div class="skill-category">
-                <h3>[Systems & Infrastructure]</h3>
-                <div class="skill-tag">Linux</div>
-                <div class="skill-tag">Windows Server</div>
-                <div class="skill-tag">Corosync</div>
-                <div class="skill-tag">Pacemaker</div>
-                <div class="skill-tag">MariaDB</div>
-            </div>
-
-            <div class="skill-category">
-                <h3>[Security Tools]</h3>
-                <div class="skill-tag">GoPhish</div>
-                <div class="skill-tag">OSINT</div>
-                <div class="skill-tag">Malware Analysis</div>
-                <div class="skill-tag">ENS Compliance</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>$ cd ~/Proyectos && ls</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>[ Wazuh SIEM Implementation ]</h3>
-                <p>Implementación completa de Wazuh SIEM en entornos Linux/Windows con reglas personalizadas y scripts de automatización para parseo de logs. Simulación de entorno SOC completo.</p>
-                <a href="https://github.com/juanrc98/wazuh-siem" target="_blank" class="btn" style="margin-top: 1rem;">Ver en GitHub →</a>
-            </div>
-
-            <div class="project-card">
-                <h3>[ High Availability Cluster ]</h3>
-                <p>Implementación de clústeres con Pacemaker y Corosync, logrando failover automático en menos de 25 segundos con balanceo de carga MariaDB.</p>
-                <a href="Proyecto-cluster.pdf" target="_blank" class="btn" style="margin-top: 1rem;">Ver Documentación →</a>
-            </div>
-
-            <div class="project-card">
-                <h3>[ Anti-Phishing Campaign ]</h3>
-                <p>Diseño y ejecución de campañas de phishing con GoPhish, incluyendo configuración SMTP, análisis de resultados y generación de reportes de concienciación.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>[ Data Leak Detection System ]</h3>
-                <p>Desarrollo de sistema automatizado para detección de fugas de información utilizando técnicas de OSINT y análisis de metadatos.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>[ ENS Audit Framework ]</h3>
-                <p>Participación en auditorías de ciberseguridad aplicando criterios del Esquema Nacional de Seguridad en infraestructuras críticas.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>[ Log Correlation Scripts ]</h3>
-                <p>Scripts en Bash y Python para automatización de análisis forense de logs y correlación de eventos de seguridad.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="certs">
-        <h2>$ cat /etc/Mis-certificaciones</h2>
-        <div class="cert-grid">
-            <a href="https://www.credly.com/badges/ad3204d9-e927-4383-8dc3-4a181659a195/linked_in_profile" target="_blank" class="cert-item cert-link">
-                <div class="cert-icon">🛡️</div>
-                <h3>CompTIA Security+</h3>
-                <p>Nov 2025 - Nov 2028</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">✅ Completed</p>
-            </a>
-
-            <div class="cert-item">
-                <div class="cert-icon">🔐</div>
-                <h3>Google Cybersecurity</h3>
-                <p>Professional Certificate</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">✅ Completed</p>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon">⚔️</div>
-                <h3>eJPT</h3>
-                <p>eLearnSecurity</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">🔄 In Progress</p>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon">☁️</div>
-                <h3>AZ-500</h3>
-                <p>Microsoft Azure Security</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">🔄 In Progress</p>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon">🎓</div>
-                <h3>ASIR</h3>
-                <p>Técnico Superior en Administración de Sistemas</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">2023-2025</p>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon">🔬</div>
-                <h3>Ciberseguridad Avanzada</h3>
-                <p>Entornos de Tecnologías de la Operación</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">Jun 2025</p>
+                <h3>Curso Intensivo de Ciberseguridad Andalucía Emplea+</h3>
+                <span class="timeline-date">Oct 2025</span>
+                <p style="margin-top: 1rem; line-height: 1.6;">
+                    Formación intensiva en ciberseguridad aplicada, técnicas de pentesting, análisis de vulnerabilidades y respuesta a incidentes.
+                </p>
             </div>
         </div>
     </section>
@@ -567,6 +328,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

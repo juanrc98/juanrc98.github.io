@@ -9,20 +9,20 @@
 
 Portfolio personal de ciberseguridad con estética terminal/hacker, mostrando proyectos, certificaciones y experiencia en Blue Team y Red Team.
 
-## 🎯 Características
+##  Características
 
-- 🖥️ **Diseño Terminal Matrix**: Animación de lluvia de caracteres estilo Matrix
-- 🔵 **Blue Team Projects**: Proyectos de defensa, SIEM, monitorización y respuesta a incidentes
-- 🔴 **Red Team Write-ups**: Documentación de explotación de máquinas CTF
-- 📱 **Responsive Design**: Adaptado para todos los dispositivos
-- ⚡ **Animaciones Suaves**: Efectos de typing, hover y transiciones
-- 🎨 **Tema Cyberpunk**: Colores verde neón sobre fondo oscuro
+-  **Diseño Terminal Matrix**: Animación de lluvia de caracteres estilo Matrix
+-  **Blue Team Projects**: Proyectos de defensa, SIEM, monitorización y respuesta a incidentes
+-  **Red Team Write-ups**: Documentación de explotación de máquinas CTF
+-  **Responsive Design**: Adaptado para todos los dispositivos
+-  **Animaciones Suaves**: Efectos de typing, hover y transiciones
+-  **Tema Cyberpunk**: Colores verde neón sobre fondo oscuro
 
 ## 🚀 Demo
 
 Visita el portfolio en vivo: [https://juanrc98.github.io/Cibersecurity-portfolio/](https://juanrc98.github.io/Cibersecurity-portfolio/)
 
-## 📂 Estructura del Proyecto
+##  Estructura del Proyecto
 ```
 Cibersecurity-portfolio/
 ├── index.html              # Estructura principal del sitio
@@ -35,31 +35,31 @@ Cibersecurity-portfolio/
 └── LICENSE                 # Licencia del proyecto
 ```
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 - **HTML5**: Estructura semántica
 - **CSS3**: Diseño responsive y animaciones
 - **JavaScript**: Efectos interactivos (Matrix rain, typing effect)
 - **GitHub Pages**: Hosting del portfolio
 
-## 📋 Secciones
+##  Secciones
 
-### 🏠 Inicio
+###  Inicio
 Terminal animado con efecto de escritura y presentación principal.
 
-### 👤 Sobre Mí
+###  Sobre Mí
 Información profesional, ubicación, idiomas y certificaciones.
 
-### 🎓 Educación
+###  Educación
 - **Técnico Superior en ASIR** (2023-2025)
 - **Curso Intensivo de Ciberseguridad Andalucía Emplea+** (Oct 2025)
 
-### 💼 Experiencia
+### Experiencia
 Timeline con experiencia laboral en:
 - **Analista SOC - IaaS365** (Mar 2025 - Jun 2025)
 - **Técnico Informático - Fersoft Informática** (Oct 2025 - Dic 2025)
 
-### 🎯 Habilidades
+###  Habilidades
 Categorías organizadas:
 - SIEM & Monitoring
 - EDR/XDR & Response
@@ -68,7 +68,7 @@ Categorías organizadas:
 - Systems & Infrastructure
 - Security Tools
 
-### 🔵 Blue Team
+###  Blue Team
 Proyectos de seguridad defensiva:
 - Wazuh SIEM Implementation
 - High Availability Cluster
@@ -76,23 +76,23 @@ Proyectos de seguridad defensiva:
 - Data Leak Detection System
 - Log Correlation Scripts
 
-### 🔴 Red Team
+###  Red Team
 Write-ups de máquinas CTF:
 - DarkHole:1 (Dificultad: Media)
 - Psycho:1 (Dificultad: Media)
 
-### 🏆 Certificaciones
+###  Certificaciones
 - CompTIA Security+ (Completada)
 - Google Cybersecurity Professional Certificate (Completada)
 - eJPT - eLearnSecurity (En progreso)
 
-### 📧 Contacto
+###  Contacto
 - Email: juanrodcas98@gmail.com
 - Teléfono: +34 640 103 050
 - GitHub: [@juanrc98](https://github.com/juanrc98)
 - LinkedIn: [Juan Rodríguez](https://www.linkedin.com/in/juan-rodriguez-castellano/)
 
-## 🎨 Personalización
+##  Personalización
 
 ### Colores
 El esquema de colores puede modificarse en `style.css`:
@@ -108,7 +108,7 @@ La velocidad del efecto Matrix se puede ajustar en `script.js`:
 setInterval(drawMatrix, 35); // Cambiar el valor (ms)
 ```
 
-## 📥 Instalación Local
+##  Instalación Local
 
 1. **Clona el repositorio:**
 ```bash
@@ -138,7 +138,7 @@ python -m http.server 8000
 npx http-server
 ```
 
-## 🔧 Modificaciones
+##  Modificaciones
 
 ### Añadir Nuevo Proyecto Blue Team
 Edita `index.html` en la sección `#projects` → Blue Team:
@@ -165,7 +165,7 @@ Edita `index.html` en la sección `#projects` → Red Team:
 </div>
 ```
 
-## 🤝 Contribuciones
+##  Contribuciones
 
 Las contribuciones son bienvenidas. Si encuentras algún bug o tienes sugerencias:
 
@@ -175,17 +175,17 @@ Las contribuciones son bienvenidas. Si encuentras algún bug o tienes sugerencia
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📝 Notas de Desarrollo
+##  Notas de Desarrollo
 
 - El efecto Matrix canvas puede consumir recursos en dispositivos antiguos
 - Los PDFs deben estar en la misma carpeta que el HTML para funcionar correctamente
 - El portfolio es completamente estático (HTML/CSS/JS puro, sin frameworks)
 
-## 📜 Licencia
+##  Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
-## 👨‍💻 Autor
+##  Autor
 
 **Juan Rodríguez Castellano**
 - Portfolio: [juanrc98.github.io](https://juanrc98.github.io/Cibersecurity-portfolio/)
@@ -193,16 +193,9 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 - LinkedIn: [Juan Rodríguez](https://www.linkedin.com/in/juan-rodriguez-castellano/)
 - Email: juanrodcas98@gmail.com
 
-## 🙏 Agradecimientos
-
-- Inspiración del diseño: Estética Matrix y terminal cyberpunk
-- Iconos: Emojis nativos
-- Fuente: Courier New (monospace)
-
 ---
 
-⭐ **Si te gusta este proyecto, dale una estrella en GitHub!**
+ **Si te gusta este proyecto, dale una estrella en GitHub!**
 ```
 root@cybersec:~# Juan Rodríguez © 2025 | Cybersecurity Portfolio
-[ Designed with terminal aesthetics in mind ]
 ```

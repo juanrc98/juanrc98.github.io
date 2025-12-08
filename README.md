@@ -1,6 +1,6 @@
 # 🛡️ Cybersecurity Portfolio - Juan Rodríguez Castellano
 
-[![Portfolio]([https://img.shields.io/badge/Portfolio-Live-00ff00?style=for-the-badge&logo=github)](https://juanrc98.github.io/Cibersecurity-portfolio/](https://juanrc98.github.io/))
+[![Portfolio](https://juanrc98.github.io/)
 [![License](https://img.shields.io/badge/License-MIT-00ff00?style=for-the-badge)](LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
@@ -20,7 +20,7 @@ Portfolio personal de ciberseguridad con estética terminal/hacker, mostrando pr
 
 ##  Demo
 
-Visita el portfolio en vivo: [[https://juanrc98.github.io/Cibersecurity-portfolio/](https://juanrc98.github.io/Cibersecurity-portfolio/](https://juanrc98.github.io/))
+Visita el portfolio en vivo: https://juanrc98.github.io/
 
 ##  Estructura del Proyecto
 ```

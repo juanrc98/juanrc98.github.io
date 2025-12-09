@@ -158,25 +158,9 @@ Edita `index.html` en la sección `#projects` → Red Team:
 </div>
 ```
 
-##  Contribuciones
-
-Las contribuciones son bienvenidas. Si encuentras algún bug o tienes sugerencias:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-##  Notas de Desarrollo
-
-- El efecto Matrix canvas puede consumir recursos en dispositivos antiguos
-- Los PDFs deben estar en la misma carpeta que el HTML para funcionar correctamente
-- El portfolio es completamente estático (HTML/CSS/JS puro, sin frameworks)
-
 ##  Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE]https://github.com/juanrc98/juanrc98.github.io/blob/main/License(LICENSE) para más detalles.
 
 ##  Autor
 

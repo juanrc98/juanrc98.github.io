@@ -1,5 +1,7 @@
 # 🛡️ Cybersecurity Portfolio - Juan Rodríguez Castellano
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Portfolio personal de ciberseguridad con estética terminal/hacker, mostrando proyectos, certificaciones y experiencia en Blue Team y Red Team.
 
 ##  Características
@@ -157,10 +159,6 @@ Edita `index.html` en la sección `#projects` → Red Team:
     <div class="btn">Ver Write-up →</div>
 </div>
 ```
-
-##  Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE]https://github.com/juanrc98/juanrc98.github.io/blob/main/License(LICENSE) para más detalles.
 
 ##  Autor
 

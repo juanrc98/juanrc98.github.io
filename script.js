@@ -1,10 +1,24 @@
 // ====================================
-// LOADER
+// LOADER - Fixed
 // ====================================
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.getElementById('loader');
+    
+    setTimeout(() => {
+        if (loader) {
+            loader.classList.add('hidden');
+        }
+    }, 2500);
+});
+
+// Backup: si todo falla, ocultar después de 4 segundos
 window.addEventListener('load', () => {
     setTimeout(() => {
-        document.getElementById('loader').classList.add('hidden');
-    }, 2000);
+        const loader = document.getElementById('loader');
+        if (loader && !loader.classList.contains('hidden')) {
+            loader.classList.add('hidden');
+        }
+    }, 1500);
 });
 
 // ====================================
@@ -31,7 +45,7 @@ function drawMatrix() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
     ctx.fillStyle = '#00ff88';
-    ctx.font = `${fontSize}px monospace`;
+    ctx.font = fontSize + 'px monospace';
     
     for (let i = 0; i < drops.length; i++) {
         const char = chars[Math.floor(Math.random() * chars.length)];
@@ -44,10 +58,8 @@ function drawMatrix() {
     }
 }
 
-// Reduce animation frame rate for better performance
 let matrixInterval = setInterval(drawMatrix, 50);
 
-// Pause matrix when tab is not visible
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
         clearInterval(matrixInterval);
@@ -78,6 +90,8 @@ const deletingSpeed = 40;
 const pauseDuration = 2000;
 
 function typeText() {
+    if (!typedElement) return;
+    
     const currentText = typingTexts[textIndex];
     
     if (!isDeleting) {
@@ -102,8 +116,7 @@ function typeText() {
     setTimeout(typeText, isDeleting ? deletingSpeed : typingSpeed);
 }
 
-// Start typing after loader
-setTimeout(typeText, 2500);
+setTimeout(typeText, 3000);
 
 // ====================================
 // NAVIGATION
@@ -113,37 +126,30 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
-// Scroll effect
-let lastScroll = 0;
-
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    // Add scrolled class
     if (currentScroll > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
-    lastScroll = currentScroll;
 });
 
-// Mobile menu toggle
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active');
-});
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
+}
 
-// Close menu on link click
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
-        navToggle.classList.remove('active');
+        if (navToggle) navToggle.classList.remove('active');
     });
 });
 
-// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -195,7 +201,7 @@ function highlightNavLink() {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+        const navLink = document.querySelector('.nav-link[href="#' + sectionId + '"]');
         
         if (navLink) {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -241,7 +247,7 @@ projectCards.forEach(card => {
         const rotateX = (y - centerY) / 20;
         const rotateY = (centerX - x) / 20;
         
-        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+        this.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-8px)';
     });
     
     card.addEventListener('mouseleave', function() {
@@ -255,8 +261,6 @@ projectCards.forEach(card => {
 console.log('%c🛡️ Juan Rodríguez Castellano', 'color: #00ff88; font-size: 24px; font-weight: bold;');
 console.log('%c💼 Cybersecurity Analyst | SOC Operations | SIEM & EDR', 'color: #888; font-size: 14px;');
 console.log('%c📧 juanrodcas98@gmail.com', 'color: #00ff88; font-size: 12px;');
-console.log('%c⚠️ Si estás viendo esto, probablemente te interese la seguridad tanto como a mí.', 'color: #ffbd2e; font-size: 12px;');
-console.log('%c🔗 LinkedIn: linkedin.com/in/juan-rodriguez-castellano/', 'color: #888; font-size: 12px;');
 
 // ====================================
 // PERFORMANCE: Disable animations on reduced motion
@@ -284,3 +288,4 @@ window.addEventListener('resize', () => {
         drops = Array(columns).fill(1);
     }, 250);
 });
+

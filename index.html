@@ -8,20 +8,16 @@
     <meta name="author" content="Juan Rodríguez Castellano">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Juan Rodríguez | Cybersecurity Analyst">
     <meta property="og:description" content="SOC Analyst especializado en SIEM, EDR y respuesta a incidentes">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://juanrc98.github.io">
     
     <title>Juan Rodríguez | Cybersecurity Analyst</title>
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
     
     <link rel="stylesheet" href="style.css">
@@ -29,7 +25,6 @@
 <body>
     <canvas id="matrix-canvas"></canvas>
     
-    <!-- Loader -->
     <div id="loader">
         <div class="loader-content">
             <div class="loader-text">INITIALIZING SYSTEM</div>
@@ -37,7 +32,6 @@
         </div>
     </div>
 
-    <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-logo">
             <span class="logo-bracket">[</span>JRC<span class="logo-bracket">]</span>
@@ -58,7 +52,6 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="terminal-window">
@@ -99,21 +92,6 @@
                     <span class="btn-icon">↓</span> Descargar CV
                 </a>
             </div>
-            
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">2</span>
-                    <span class="stat-label">Certificaciones</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">4+</span>
-                    <span class="stat-label">Meses SOC</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Monitorización</span>
-                </div>
-            </div>
         </div>
         
         <div class="scroll-indicator">
@@ -122,7 +100,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <div class="section-header">
@@ -171,13 +148,6 @@
                             <span class="card-value">Español (Nativo) · Inglés (B2)</span>
                         </div>
                     </div>
-                    <div class="info-card">
-                        <div class="card-icon">💼</div>
-                        <div class="card-content">
-                            <span class="card-label">Disponibilidad</span>
-                            <span class="card-value available">Inmediata</span>
-                        </div>
-                    </div>
                 </div>
             </div>
             
@@ -185,7 +155,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="section section-dark">
         <div class="container">
             <div class="section-header">
@@ -194,7 +163,7 @@
             </div>
             
             <div class="timeline">
-                <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-item">
                     <div class="timeline-marker">
                         <span class="timeline-dot"></span>
                     </div>
@@ -223,7 +192,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-item">
                     <div class="timeline-marker">
                         <span class="timeline-dot"></span>
                     </div>
@@ -254,7 +223,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
             <div class="section-header">
@@ -263,7 +231,7 @@
             </div>
             
             <div class="skills-grid">
-                <div class="skill-card" data-category="siem">
+                <div class="skill-card">
                     <div class="skill-icon">🔍</div>
                     <h3>SIEM & Monitoring</h3>
                     <div class="skill-tags">
@@ -273,10 +241,11 @@
                         <span class="skill-tag">IBM QRadar</span>
                         <span class="skill-tag">Prometheus</span>
                         <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">ELK Stack</span>
                     </div>
                 </div>
                 
-                <div class="skill-card" data-category="edr">
+                <div class="skill-card">
                     <div class="skill-icon">🛡️</div>
                     <h3>EDR/XDR & Response</h3>
                     <div class="skill-tags">
@@ -285,10 +254,11 @@
                         <span class="skill-tag">Incident Response</span>
                         <span class="skill-tag">Threat Hunting</span>
                         <span class="skill-tag">Análisis Forense</span>
+                        <span class="skill-tag">MITRE ATT&CK</span>
                     </div>
                 </div>
                 
-                <div class="skill-card" data-category="network">
+                <div class="skill-card">
                     <div class="skill-icon">🌐</div>
                     <h3>Networking & Security</h3>
                     <div class="skill-tags">
@@ -296,12 +266,36 @@
                         <span class="skill-tag">Firewall</span>
                         <span class="skill-tag">VPN</span>
                         <span class="skill-tag">IDS/IPS</span>
-                        <span class="skill-tag">Active Directory</span>
-                        <span class="skill-tag">LDAP</span>
+                        <span class="skill-tag">Snort</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">TCP/IP</span>
                     </div>
                 </div>
                 
-                <div class="skill-card" data-category="code">
+                <div class="skill-card">
+                    <div class="skill-icon">🔐</div>
+                    <h3>Identity & Access</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">LDAP</span>
+                        <span class="skill-tag">Azure AD</span>
+                        <span class="skill-tag">GPO</span>
+                        <span class="skill-tag">IAM</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud Security</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microsoft Azure</span>
+                        <span class="skill-tag">Azure Security Center</span>
+                        <span class="skill-tag">Microsoft Sentinel</span>
+                        <span class="skill-tag">Cloud Security</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
                     <div class="skill-icon">⚡</div>
                     <h3>Automation & Scripting</h3>
                     <div class="skill-tags">
@@ -309,22 +303,26 @@
                         <span class="skill-tag">Bash</span>
                         <span class="skill-tag">PowerShell</span>
                         <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">YAML</span>
+                        <span class="skill-tag">Regex</span>
                     </div>
                 </div>
                 
-                <div class="skill-card" data-category="systems">
+                <div class="skill-card">
                     <div class="skill-icon">🖥️</div>
                     <h3>Systems & Infrastructure</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Linux</span>
                         <span class="skill-tag">Windows Server</span>
+                        <span class="skill-tag">Docker</span>
                         <span class="skill-tag">Pacemaker</span>
                         <span class="skill-tag">Corosync</span>
                         <span class="skill-tag">MariaDB</span>
+                        <span class="skill-tag">VMware</span>
                     </div>
                 </div>
                 
-                <div class="skill-card" data-category="offensive">
+                <div class="skill-card">
                     <div class="skill-icon">⚔️</div>
                     <h3>Offensive Security</h3>
                     <div class="skill-tags">
@@ -332,7 +330,9 @@
                         <span class="skill-tag">Burp Suite</span>
                         <span class="skill-tag">Metasploit</span>
                         <span class="skill-tag">OSINT</span>
-                        <span class="skill-tag">Privilege Escalation</span>
+                        <span class="skill-tag">Gobuster</span>
+                        <span class="skill-tag">John/Hashcat</span>
+                        <span class="skill-tag">PrivEsc</span>
                     </div>
                 </div>
             </div>
@@ -341,7 +341,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section section-dark">
         <div class="container">
             <div class="section-header">
@@ -349,7 +348,6 @@
                 <h2 class="section-title">Proyectos</h2>
             </div>
             
-            <!-- Blue Team Projects -->
             <div class="projects-category">
                 <h3 class="category-title">
                     <span class="category-icon blue">🛡️</span>
@@ -427,24 +425,9 @@
                             <span class="tag">Forensics</span>
                         </div>
                     </article>
-                    
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">🔐</span>
-                            <h4>Active Directory Hardening</h4>
-                        </div>
-                        <p>Guía completa de hardening para Active Directory incluyendo GPOs de seguridad, LAPS, configuración de auditoría y detección de ataques comunes.</p>
-                        <div class="project-tags">
-                            <span class="tag">Active Directory</span>
-                            <span class="tag">GPO</span>
-                            <span class="tag">Hardening</span>
-                        </div>
-                        <span class="project-status">🚧 En desarrollo</span>
-                    </article>
                 </div>
             </div>
             
-            <!-- Red Team Projects -->
             <div class="projects-category">
                 <h3 class="category-title">
                     <span class="category-icon red">⚔️</span>
@@ -485,21 +468,6 @@
                             Ver Write-up →
                         </a>
                     </article>
-                    
-                    <article class="project-card ctf-card">
-                        <div class="project-header">
-                            <span class="project-icon">🎯</span>
-                            <h4>HackTheBox Progress</h4>
-                            <span class="difficulty ongoing">En curso</span>
-                        </div>
-                        <p>Colección de write-ups de máquinas resueltas en HackTheBox, documentando metodología y técnicas de pentesting.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTB</span>
-                            <span class="tag">Pentesting</span>
-                            <span class="tag">CTF</span>
-                        </div>
-                        <span class="project-status">🚧 En progreso</span>
-                    </article>
                 </div>
             </div>
             
@@ -507,7 +475,6 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section id="certs" class="section">
         <div class="container">
             <div class="section-header">
@@ -553,6 +520,18 @@
                         <span class="cert-status verified">✓ Completado</span>
                     </div>
                 </div>
+                
+                <div class="cert-card in-progress">
+                    <div class="cert-badge">
+                        <span class="cert-icon">☁️</span>
+                    </div>
+                    <div class="cert-info">
+                        <h3>AZ-500</h3>
+                        <p class="cert-issuer">Microsoft Azure Security Engineer</p>
+                        <p class="cert-date">Expected 2025</p>
+                        <span class="cert-status progress">⏳ In Progress</span>
+                    </div>
+                </div>
             </div>
             
             <div class="certs-roadmap">
@@ -568,7 +547,7 @@
                     </div>
                     <div class="roadmap-item">
                         <span class="roadmap-icon">🎯</span>
-                        <span>OSCP</span>
+                        <span>SC-200</span>
                     </div>
                 </div>
             </div>
@@ -577,7 +556,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section section-dark">
         <div class="container">
             <div class="section-header">
@@ -628,7 +606,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -642,17 +619,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
-    </section>
-
-    <footer>
-        <p>root@cybersec:~# Juan Rodríguez © 2025 | Cybersecurity Portfolio</p>
-        <p style="margin-top: 0.5rem; opacity: 0.7; font-size: 0.85rem;"></p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
 

@@ -1263,3 +1263,14 @@ h1.glitch:hover {
         flex-direction: column;
     }
 }
+
+/* Cert In Progress */
+.cert-card.in-progress {
+    border-style: dashed;
+    opacity: 0.9;
+}
+
+.cert-status.progress {
+    color: #ffbd2e;
+    background: rgba(255, 189, 46, 0.15);
+}

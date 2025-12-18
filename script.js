@@ -1,31 +1,21 @@
 // ====================================
-// LOADER - Fixed
+// LOADER
 // ====================================
-document.addEventListener('DOMContentLoaded', () => {
-    const loader = document.getElementById('loader');
+document.addEventListener('DOMContentLoaded', function() {
+    var loader = document.getElementById('loader');
     
-    setTimeout(() => {
+    setTimeout(function() {
         if (loader) {
             loader.classList.add('hidden');
         }
     }, 2500);
 });
 
-// Backup: si todo falla, ocultar después de 4 segundos
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        const loader = document.getElementById('loader');
-        if (loader && !loader.classList.contains('hidden')) {
-            loader.classList.add('hidden');
-        }
-    }, 1500);
-});
-
 // ====================================
-// MATRIX RAIN EFFECT (Optimized)
+// MATRIX RAIN EFFECT
 // ====================================
-const canvas = document.getElementById('matrix-canvas');
-const ctx = canvas.getContext('2d');
+var canvas = document.getElementById('matrix-canvas');
+var ctx = canvas.getContext('2d');
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
@@ -35,10 +25,14 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-const fontSize = 14;
-let columns = Math.floor(canvas.width / fontSize);
-let drops = Array(columns).fill(1);
+var chars = 'アイウエオカキクケコ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+var fontSize = 14;
+var columns = Math.floor(canvas.width / fontSize);
+var drops = [];
+
+for (var i = 0; i < columns; i++) {
+    drops[i] = 1;
+}
 
 function drawMatrix() {
     ctx.fillStyle = 'rgba(10, 15, 13, 0.05)';
@@ -47,8 +41,8 @@ function drawMatrix() {
     ctx.fillStyle = '#00ff88';
     ctx.font = fontSize + 'px monospace';
     
-    for (let i = 0; i < drops.length; i++) {
-        const char = chars[Math.floor(Math.random() * chars.length)];
+    for (var i = 0; i < drops.length; i++) {
+        var char = chars[Math.floor(Math.random() * chars.length)];
         ctx.fillText(char, i * fontSize, drops[i] * fontSize);
         
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -58,20 +52,12 @@ function drawMatrix() {
     }
 }
 
-let matrixInterval = setInterval(drawMatrix, 50);
-
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        clearInterval(matrixInterval);
-    } else {
-        matrixInterval = setInterval(drawMatrix, 50);
-    }
-});
+var matrixInterval = setInterval(drawMatrix, 50);
 
 // ====================================
 // TYPING EFFECT
 // ====================================
-const typingTexts = [
+var typingTexts = [
     'whoami',
     'Cybersecurity Analyst',
     'SOC Operations Specialist',
@@ -81,18 +67,15 @@ const typingTexts = [
     'eJPTv2 Certified'
 ];
 
-let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const typedElement = document.getElementById('typed-text');
-const typingSpeed = 80;
-const deletingSpeed = 40;
-const pauseDuration = 2000;
+var textIndex = 0;
+var charIndex = 0;
+var isDeleting = false;
+var typedElement = document.getElementById('typed-text');
 
 function typeText() {
     if (!typedElement) return;
     
-    const currentText = typingTexts[textIndex];
+    var currentText = typingTexts[textIndex];
     
     if (!isDeleting) {
         typedElement.textContent = currentText.substring(0, charIndex + 1);
@@ -100,7 +83,7 @@ function typeText() {
         
         if (charIndex === currentText.length) {
             isDeleting = true;
-            setTimeout(typeText, pauseDuration);
+            setTimeout(typeText, 2000);
             return;
         }
     } else {
@@ -113,7 +96,7 @@ function typeText() {
         }
     }
     
-    setTimeout(typeText, isDeleting ? deletingSpeed : typingSpeed);
+    setTimeout(typeText, isDeleting ? 40 : 80);
 }
 
 setTimeout(typeText, 3000);
@@ -121,15 +104,13 @@ setTimeout(typeText, 3000);
 // ====================================
 // NAVIGATION
 // ====================================
-const navbar = document.getElementById('navbar');
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
+var navbar = document.getElementById('navbar');
+var navToggle = document.querySelector('.nav-toggle');
+var navMenu = document.querySelector('.nav-menu');
+var navLinks = document.querySelectorAll('.nav-link');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 50) {
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
@@ -137,29 +118,25 @@ window.addEventListener('scroll', () => {
 });
 
 if (navToggle) {
-    navToggle.addEventListener('click', () => {
+    navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
     });
 }
 
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
         navMenu.classList.remove('active');
-        if (navToggle) navToggle.classList.remove('active');
     });
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        var target = document.querySelector(this.getAttribute('href'));
         
         if (target) {
-            const headerOffset = 80;
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            
+            var offsetPosition = target.offsetTop - 80;
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
@@ -171,88 +148,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ====================================
 // SECTION ANIMATIONS
 // ====================================
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
-const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
     });
-}, observerOptions);
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.section').forEach(section => {
-    sectionObserver.observe(section);
-});
-
-// ====================================
-// ACTIVE NAVIGATION LINK
-// ====================================
-const sections = document.querySelectorAll('section[id]');
-
-function highlightNavLink() {
-    const scrollY = window.pageYOffset;
-    
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector('.nav-link[href="#' + sectionId + '"]');
-        
-        if (navLink) {
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLink.classList.add('active');
-            } else {
-                navLink.classList.remove('active');
-            }
-        }
-    });
-}
-
-window.addEventListener('scroll', highlightNavLink);
-
-// ====================================
-// SKILL CARDS HOVER EFFECT
-// ====================================
-const skillCards = document.querySelectorAll('.skill-card');
-
-skillCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-5px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
-
-// ====================================
-// PROJECT CARDS TILT EFFECT
-// ====================================
-const projectCards = document.querySelectorAll('.project-card');
-
-projectCards.forEach(card => {
-    card.addEventListener('mousemove', function(e) {
-        const rect = this.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
-        
-        this.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-8px)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-    });
+document.querySelectorAll('.section').forEach(function(section) {
+    observer.observe(section);
 });
 
 // ====================================
@@ -260,32 +165,5 @@ projectCards.forEach(card => {
 // ====================================
 console.log('%c🛡️ Juan Rodríguez Castellano', 'color: #00ff88; font-size: 24px; font-weight: bold;');
 console.log('%c💼 Cybersecurity Analyst | SOC Operations | SIEM & EDR', 'color: #888; font-size: 14px;');
-console.log('%c📧 juanrodcas98@gmail.com', 'color: #00ff88; font-size: 12px;');
 
-// ====================================
-// PERFORMANCE: Disable animations on reduced motion
-// ====================================
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-if (prefersReducedMotion.matches) {
-    clearInterval(matrixInterval);
-    canvas.style.display = 'none';
-    
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.opacity = '1';
-        section.style.transform = 'none';
-    });
-}
-
-// ====================================
-// RESIZE HANDLER FOR MATRIX
-// ====================================
-let resizeTimeout;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-        columns = Math.floor(canvas.width / fontSize);
-        drops = Array(columns).fill(1);
-    }, 250);
-});
 

@@ -3,623 +3,606 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Juan Rodríguez Castellano - Cybersecurity Analyst especializado en SOC Operations, SIEM, EDR y respuesta a incidentes. CompTIA Security+ y eJPTv2 certificado.">
-    <meta name="keywords" content="cybersecurity, SOC analyst, SIEM, EDR, security+, pentesting, córdoba, españa">
+    <meta name="description" content="Juan Rodríguez Castellano - Analista Junior de Ciberseguridad especializado en SOC Operations, SIEM, Microsoft Security y Cloud Security en Azure. CompTIA Security+ y eJPTv2.">
+    <meta name="keywords" content="cybersecurity, SOC analyst, SIEM, EDR, Microsoft Sentinel, Azure Security, Security+, eJPT, córdoba, españa">
     <meta name="author" content="Juan Rodríguez Castellano">
     <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="Juan Rodríguez | Cybersecurity Analyst">
-    <meta property="og:description" content="SOC Analyst especializado en SIEM, EDR y respuesta a incidentes">
+
+    <meta property="og:title" content="Juan Rodríguez Castellano | Junior Cybersecurity Analyst">
+    <meta property="og:description" content="SOC Analyst · Microsoft Security · Cloud Security (Azure) · Security+ · eJPT">
     <meta property="og:type" content="website">
-    
-    <title>Juan Rodríguez | Cybersecurity Analyst</title>
-    
+
+    <title>Juan Rodríguez Castellano | Junior Cybersecurity Analyst</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="matrix-canvas"></canvas>
-    
-    <div id="loader">
-        <div class="loader-content">
-            <div class="loader-text">INITIALIZING SYSTEM</div>
-            <div class="loader-bar"><div class="loader-progress"></div></div>
-        </div>
-    </div>
 
     <nav id="navbar">
-        <div class="nav-logo">
-            <span class="logo-bracket">[</span>JRC<span class="logo-bracket">]</span>
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-mark">JRC</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#experience" class="nav-link">Experiencia</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#certs" class="nav-link">Certificaciones</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contacto</a></li>
+            </ul>
         </div>
-        <button class="nav-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-menu">
-            <li><a href="#home" class="nav-link">INICIO</a></li>
-            <li><a href="#about" class="nav-link">SOBRE MÍ</a></li>
-            <li><a href="#experience" class="nav-link">EXPERIENCIA</a></li>
-            <li><a href="#skills" class="nav-link">SKILLS</a></li>
-            <li><a href="#projects" class="nav-link">PROYECTOS</a></li>
-            <li><a href="#certs" class="nav-link">CERTS</a></li>
-            <li><a href="#contact" class="nav-link nav-cta">CONTACTO</a></li>
-        </ul>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="term-btn red"></span>
-                        <span class="term-btn yellow"></span>
-                        <span class="term-btn green"></span>
-                    </div>
-                    <span class="terminal-title">root@security:~</span>
-                </div>
-                <div class="terminal-body">
-                    <div class="terminal-line">
-                        <span class="prompt">$</span> cat /etc/identity
-                    </div>
-                    <h1 class="glitch" data-text="JUAN RODRÍGUEZ CASTELLANO">JUAN RODRÍGUEZ CASTELLANO</h1>
-                    <div class="typing-container">
-                        <span class="prompt">$</span>
-                        <span id="typed-text"></span>
-                        <span class="cursor">_</span>
-                    </div>
-                    <p class="hero-subtitle">
-                        <span class="highlight">SOC Analyst</span> · 
-                        <span class="highlight">Incident Response</span> · 
-                        <span class="highlight">SIEM & EDR</span>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">
+                        <span class="status-dot"></span>
+                        Disponible para oportunidades · Córdoba / Remoto España
+                    </span>
+                    <h1 class="hero-title">
+                        Juan Rodríguez Castellano
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Analista Junior de Ciberseguridad
+                    </h2>
+                    <p class="hero-description">
+                        Especializado en <strong>operaciones SOC</strong>, <strong>SIEM</strong> y <strong>Microsoft Security</strong>.
+                        Con experiencia en monitorización 24/7, respuesta a incidentes y despliegue de infraestructura Microsoft
+                        en entorno corporativo. Enfocado en <strong>Cloud Security en Azure</strong>.
                     </p>
+                    <div class="hero-meta">
+                        <span class="hero-meta-item"><span class="meta-label">Certificaciones:</span> CompTIA Security+ · eJPTv2</span>
+                        <span class="hero-meta-item"><span class="meta-label">En preparación:</span> Microsoft SC-200</span>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            Contactar
+                        </a>
+                        <a href="CV_JuanRodriguezCastellano.pdf" download class="btn btn-secondary">
+                            Descargar CV
+                        </a>
+                        <a href="#projects" class="btn btn-ghost">
+                            Ver proyectos →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="code-title">analyst.profile</span>
+                        </div>
+                        <div class="code-body">
+<pre><span class="c-key">role</span>: <span class="c-str">"Junior Cybersecurity Analyst"</span>
+<span class="c-key">location</span>: <span class="c-str">"Córdoba, España"</span>
+<span class="c-key">focus</span>:
+  - <span class="c-str">"SOC Operations (L1)"</span>
+  - <span class="c-str">"Microsoft Security"</span>
+  - <span class="c-str">"Cloud Security (Azure)"</span>
+<span class="c-key">tools</span>:
+  - <span class="c-str">"LogPoint · Wazuh"</span>
+  - <span class="c-str">"Trend Micro · Cynet"</span>
+  - <span class="c-str">"Microsoft Sentinel"</span>
+  - <span class="c-str">"MITRE ATT&amp;CK"</span>
+<span class="c-key">status</span>: <span class="c-str">"Open to work"</span>
+</pre>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">
-                    <span class="btn-icon">→</span> Contactar
-                </a>
-                <a href="#projects" class="btn btn-secondary">
-                    <span class="btn-icon">◈</span> Ver Proyectos
-                </a>
-                <a href="CV_Juan_Rodríguez_Castellano.pdf" download class="btn btn-outline">
-                    <span class="btn-icon">↓</span> Descargar CV
-                </a>
-            </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <section id="about" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;about&gt;</span>
-                <h2 class="section-title">Sobre Mí</h2>
+                <span class="section-number">01</span>
+                <h2 class="section-title">Sobre mí</h2>
+                <div class="section-line"></div>
             </div>
-            
+
             <div class="about-grid">
                 <div class="about-text">
                     <p class="lead">
-                        Técnico Superior en <strong>Administración de Sistemas Informáticos</strong> especializado en 
-                        <span class="text-accent">ciberseguridad</span> con experiencia práctica en entornos SOC.
+                        Técnico Superior en <strong>Administración de Sistemas Informáticos (ASIR)</strong>
+                        con formación especializada en ciberseguridad y experiencia práctica en operaciones SOC 24/7.
                     </p>
                     <p>
-                        Mi experiencia incluye monitorización 24/7, respuesta a incidentes, y análisis de amenazas 
-                        utilizando herramientas SIEM como <strong>LogPoint</strong>, <strong>Wazuh</strong> y 
-                        <strong>Splunk</strong>, junto con soluciones EDR/XDR como <strong>Trend Micro</strong> y 
-                        <strong>Cynet</strong>.
+                        En mis prácticas en <strong>IaaS365</strong> trabajé en un SOC multicliente con SIEM
+                        (<strong>LogPoint</strong>, <strong>Wazuh</strong>) y EDR/XDR (<strong>Trend Micro</strong>,
+                        <strong>Cynet</strong>), aplicando <strong>MITRE ATT&CK</strong> para el triaje, documentación
+                        y escalado de alertas. Complementé esa experiencia con escaneo de vulnerabilidades
+                        (<strong>Nessus</strong>, <strong>OpenVAS</strong>) y auditorías conforme al Esquema
+                        Nacional de Seguridad.
                     </p>
                     <p>
-                        Certificado en <strong>CompTIA Security+</strong> y <strong>eJPTv2</strong>, combino 
-                        conocimientos de defensa (Blue Team) con habilidades ofensivas (Red Team) para una 
-                        visión completa de la seguridad.
+                        Actualmente participo en un proyecto de migración de 230+ endpoints a Microsoft 365
+                        en <strong>Ecointegral</strong>, trabajando con <strong>Windows Autopilot</strong>,
+                        <strong>Microsoft Entra ID</strong> y políticas de cumplimiento.
+                    </p>
+                    <p>
+                        Mi desarrollo profesional se orienta hacia <strong>Microsoft Security</strong> y
+                        <strong>Cloud Security en Azure</strong>. Actualmente preparo la certificación
+                        <strong>SC-200</strong> y construyo laboratorios propios con Microsoft Sentinel y KQL.
                     </p>
                 </div>
-                
-                <div class="about-cards">
+
+                <aside class="about-sidebar">
                     <div class="info-card">
-                        <div class="card-icon">📍</div>
-                        <div class="card-content">
-                            <span class="card-label">Ubicación</span>
-                            <span class="card-value">Córdoba, España</span>
-                        </div>
+                        <span class="info-label">Ubicación</span>
+                        <span class="info-value">Córdoba, España</span>
                     </div>
                     <div class="info-card">
-                        <div class="card-icon">🎓</div>
-                        <div class="card-content">
-                            <span class="card-label">Formación</span>
-                            <span class="card-value">ASIR (2023-2025)</span>
-                        </div>
+                        <span class="info-label">Disponibilidad</span>
+                        <span class="info-value">Inmediata · Turnos 24/7</span>
                     </div>
                     <div class="info-card">
-                        <div class="card-icon">🌐</div>
-                        <div class="card-content">
-                            <span class="card-label">Idiomas</span>
-                            <span class="card-value">Español (Nativo) · Inglés (B2)</span>
-                        </div>
+                        <span class="info-label">Movilidad</span>
+                        <span class="info-value">Andalucía, Madrid, Remoto</span>
                     </div>
-                </div>
+                    <div class="info-card">
+                        <span class="info-label">Idiomas</span>
+                        <span class="info-value">Español (Nativo) · Inglés (B2)</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label">Formación</span>
+                        <span class="info-value">ASIR (2023-2025) · The Bridge (2025)</span>
+                    </div>
+                </aside>
             </div>
-            
-            <span class="section-tag section-tag-end">&lt;/about&gt;</span>
         </div>
     </section>
 
-    <section id="experience" class="section section-dark">
+    <section id="experience" class="section section-alt">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;experience&gt;</span>
-                <h2 class="section-title">Experiencia Profesional</h2>
+                <span class="section-number">02</span>
+                <h2 class="section-title">Experiencia profesional</h2>
+                <div class="section-line"></div>
             </div>
-            
+
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span class="timeline-dot"></span>
-                    </div>
+
+                <article class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Analista de Ciberseguridad (SOC)</h3>
-                            <span class="timeline-company">IaaS365</span>
-                        </div>
                         <div class="timeline-meta">
-                            <span class="timeline-date">Mar 2025 - Jun 2025</span>
-                            <span class="timeline-location"> Córdoba (Híbrido)</span>
+                            <span class="timeline-date">Mar 2026 — Actualidad</span>
+                            <span class="timeline-location">Córdoba · Presencial</span>
                         </div>
+                        <h3 class="timeline-role">Técnico de Soporte TI — Proyecto migración Microsoft 365</h3>
+                        <h4 class="timeline-company">ECOINTEGRAL INGENIERÍA, SL (vía GI Group)</h4>
+                        <p class="timeline-context">
+                            Proyecto de despliegue y migración de 230+ endpoints Windows al entorno corporativo
+                            Microsoft 365, enmarcado en la integración de Ecointegral en el grupo Bureau Veritas.
+                        </p>
                         <ul class="timeline-list">
-                            <li>Monitorización 24/7 con <strong>LogPoint SIEM</strong> y <strong>Wazuh</strong> en entornos Linux/Windows</li>
-                            <li>Detección y respuesta a incidentes mediante <strong>Trend Micro EDR</strong> y <strong>Cynet XDR</strong></li>
-                            <li>Implementación de campañas anti-phishing con <strong>GoPhish</strong></li>
-                            <li>Auditorías bajo <strong>Esquema Nacional de Seguridad (ENS)</strong></li>
-                            <li>Automatización de análisis forense con <strong>Python</strong> y <strong>Bash</strong></li>
+                            <li>Preparación y despliegue de equipos mediante <strong>Windows Autopilot</strong></li>
+                            <li>Gestión de identidades en <strong>Microsoft Entra ID</strong></li>
+                            <li>Verificación de políticas de cumplimiento y configuración de seguridad de endpoints</li>
+                            <li>Resolución de incidencias de despliegue y soporte a usuarios finales</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span class="tag">SIEM</span>
-                            <span class="tag">EDR/XDR</span>
-                            <span class="tag">Incident Response</span>
-                            <span class="tag">Python</span>
+                            <span class="tag">Windows Autopilot</span>
+                            <span class="tag">Microsoft Entra ID</span>
+                            <span class="tag">Microsoft 365</span>
+                            <span class="tag">Compliance</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span class="timeline-dot"></span>
-                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Técnico Informático</h3>
-                            <span class="timeline-company">Fersoft Informática</span>
-                        </div>
                         <div class="timeline-meta">
-                            <span class="timeline-date">Oct 2025 - Dic 2025</span>
-                            <span class="timeline-location"> Córdoba</span>
+                            <span class="timeline-date">Mar 2025 — Jun 2025</span>
+                            <span class="timeline-location">Córdoba · Híbrido · 24/7</span>
                         </div>
+                        <h3 class="timeline-role">Analista de Ciberseguridad — SOC N1</h3>
+                        <h4 class="timeline-company">IaaS365</h4>
+                        <p class="timeline-context">
+                            Prácticas profesionales en un SOC 24/7 multicliente, participando en monitorización,
+                            triaje y escalado de alertas de seguridad.
+                        </p>
                         <ul class="timeline-list">
-                            <li>Administración de infraestructura TI (servidores, redes, estaciones)</li>
-                            <li>Resolución de incidencias hardware/software</li>
-                            <li>Soporte técnico y gestión de tickets</li>
+                            <li>Monitorización de consolas SIEM (<strong>LogPoint</strong>, <strong>Wazuh</strong>) y EDR/XDR (<strong>Trend Micro</strong>, <strong>Cynet</strong>) en turnos rotativos</li>
+                            <li>Triaje y clasificación de alertas por criticidad, validación de eventos y gestión de falsos positivos</li>
+                            <li>Identificación de IOCs en entornos Windows/Linux y clasificación mediante <strong>MITRE ATT&CK</strong></li>
+                            <li>Escalado de incidentes a N2 con análisis de causa raíz</li>
+                            <li>Ejecución de escaneos de vulnerabilidades con <strong>Nessus</strong> y <strong>OpenVAS</strong>, priorización CVSS</li>
+                            <li>Colaboración en campañas de phishing simulado con <strong>GoPhish</strong> y auditorías ENS</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span class="tag">Sysadmin</span>
-                            <span class="tag">Networking</span>
-                            <span class="tag">Soporte</span>
+                            <span class="tag">LogPoint</span>
+                            <span class="tag">Wazuh</span>
+                            <span class="tag">Trend Micro</span>
+                            <span class="tag">Cynet</span>
+                            <span class="tag">MITRE ATT&CK</span>
+                            <span class="tag">SOC 24/7</span>
                         </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Oct 2025 — Dic 2025</span>
+                            <span class="timeline-location">Córdoba · Presencial</span>
+                        </div>
+                        <h3 class="timeline-role">Técnico Informático</h3>
+                        <h4 class="timeline-company">Fersoft Informática</h4>
+                        <p class="timeline-context">
+                            Soporte técnico e implantación de software de gestión empresarial en pymes,
+                            en el marco del proyecto nacional de despliegue de Verifactu.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>Instalación y configuración de SQL Server, creación y vinculación de bases de datos</li>
+                            <li>Despliegue e integración de software de facturación y adaptación a Verifactu</li>
+                            <li>Soporte presencial y remoto a usuarios finales</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Windows</span>
+                            <span class="tag">SQL Server</span>
+                            <span class="tag">Soporte TI</span>
+                        </div>
+                    </div>
+                </article>
+
             </div>
-            
-            <span class="section-tag section-tag-end">&lt;/experience&gt;</span>
         </div>
     </section>
 
     <section id="skills" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;skills&gt;</span>
-                <h2 class="section-title">Competencias Técnicas</h2>
+                <span class="section-number">03</span>
+                <h2 class="section-title">Competencias técnicas</h2>
+                <div class="section-line"></div>
             </div>
-            
+
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">🔍</div>
-                    <h3>SIEM & Monitoring</h3>
+                    <h3 class="skill-title">SIEM & Monitoring</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">LogPoint</span>
                         <span class="skill-tag">Wazuh</span>
-                        <span class="skill-tag">Splunk</span>
-                        <span class="skill-tag">IBM QRadar</span>
-                        <span class="skill-tag">Prometheus</span>
-                        <span class="skill-tag">Grafana</span>
-                        <span class="skill-tag">ELK Stack</span>
+                        <span class="skill-tag">Microsoft Sentinel</span>
+                        <span class="skill-tag">Splunk (básico)</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
-                    <div class="skill-icon">🛡️</div>
-                    <h3>EDR/XDR & Response</h3>
+                    <h3 class="skill-title">EDR / XDR & Response</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Trend Micro</span>
-                        <span class="skill-tag">Cynet</span>
+                        <span class="skill-tag">Trend Micro Vision One</span>
+                        <span class="skill-tag">Cynet XDR</span>
                         <span class="skill-tag">Incident Response</span>
-                        <span class="skill-tag">Threat Hunting</span>
-                        <span class="skill-tag">Análisis Forense</span>
                         <span class="skill-tag">MITRE ATT&CK</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Networking & Security</h3>
+                    <h3 class="skill-title">Cloud Security (Azure)</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">pfSense</span>
-                        <span class="skill-tag">Firewall</span>
-                        <span class="skill-tag">VPN</span>
-                        <span class="skill-tag">IDS/IPS</span>
-                        <span class="skill-tag">Snort</span>
-                        <span class="skill-tag">Wireshark</span>
-                        <span class="skill-tag">TCP/IP</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">🔐</div>
-                    <h3>Identity & Access</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Active Directory</span>
-                        <span class="skill-tag">LDAP</span>
-                        <span class="skill-tag">Azure AD</span>
-                        <span class="skill-tag">GPO</span>
-                        <span class="skill-tag">IAM</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">☁️</div>
-                    <h3>Cloud Security</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Microsoft Azure</span>
-                        <span class="skill-tag">Azure Security Center</span>
                         <span class="skill-tag">Microsoft Sentinel</span>
-                        <span class="skill-tag">Cloud Security</span>
+                        <span class="skill-tag">Defender for Cloud</span>
+                        <span class="skill-tag">Microsoft Entra ID</span>
+                        <span class="skill-tag">KQL</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>Automation & Scripting</h3>
+                    <h3 class="skill-title">Identity & Access</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Microsoft Entra ID</span>
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">Windows Autopilot</span>
+                        <span class="skill-tag">RBAC</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="skill-title">Vulnerability & Threat Intel</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Nessus</span>
+                        <span class="skill-tag">OpenVAS</span>
+                        <span class="skill-tag">CVSS</span>
+                        <span class="skill-tag">VirusTotal</span>
+                        <span class="skill-tag">OSINT</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="skill-title">Scripting & Automation</h3>
+                    <div class="skill-tags">
                         <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">PowerShell</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">YAML</span>
+                        <span class="skill-tag">Python (básico)</span>
+                        <span class="skill-tag">PowerShell (básico)</span>
                         <span class="skill-tag">Regex</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
-                    <div class="skill-icon">🖥️</div>
-                    <h3>Systems & Infrastructure</h3>
+                    <h3 class="skill-title">Systems & Networking</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Linux</span>
                         <span class="skill-tag">Windows Server</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Pacemaker</span>
-                        <span class="skill-tag">Corosync</span>
-                        <span class="skill-tag">MariaDB</span>
-                        <span class="skill-tag">VMware</span>
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">VPN</span>
+                        <span class="skill-tag">Firewall</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
-                    <div class="skill-icon">⚔️</div>
-                    <h3>Offensive Security</h3>
+                    <h3 class="skill-title">Offensive Security (básico)</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Nmap</span>
                         <span class="skill-tag">Burp Suite</span>
                         <span class="skill-tag">Metasploit</span>
-                        <span class="skill-tag">OSINT</span>
-                        <span class="skill-tag">Gobuster</span>
-                        <span class="skill-tag">John/Hashcat</span>
-                        <span class="skill-tag">PrivEsc</span>
+                        <span class="skill-tag">Wireshark</span>
                     </div>
                 </div>
             </div>
-            
-            <span class="section-tag section-tag-end">&lt;/skills&gt;</span>
         </div>
     </section>
 
-    <section id="projects" class="section section-dark">
+    <section id="projects" class="section section-alt">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;projects&gt;</span>
-                <h2 class="section-title">Proyectos</h2>
+                <span class="section-number">04</span>
+                <h2 class="section-title">Proyectos &amp; laboratorios</h2>
+                <div class="section-line"></div>
             </div>
-            
-            <div class="projects-category">
-                <h3 class="category-title">
-                    <span class="category-icon blue">🛡️</span>
-                    BLUE TEAM - Defensa y Monitorización
-                </h3>
-                
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">📊</span>
-                            <h4>Wazuh SIEM Implementation</h4>
-                        </div>
-                        <p>Implementación completa de Wazuh SIEM en entornos Linux/Windows con reglas personalizadas, decoders custom y scripts de automatización para parseo de logs.</p>
-                        <div class="project-tags">
-                            <span class="tag">Wazuh</span>
-                            <span class="tag">SIEM</span>
-                            <span class="tag">Linux</span>
-                        </div>
-                        <a href="https://github.com/juanrc98/wazuh-siem" target="_blank" class="project-link">
-                            Ver en GitHub →
-                        </a>
-                    </article>
-                    
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">⚙️</span>
-                            <h4>High Availability Cluster</h4>
-                        </div>
-                        <p>Clúster de alta disponibilidad con Pacemaker y Corosync, logrando failover automático en menos de 25 segundos con balanceo de carga MariaDB.</p>
-                        <div class="project-tags">
-                            <span class="tag">Pacemaker</span>
-                            <span class="tag">Corosync</span>
-                            <span class="tag">HA</span>
-                        </div>
-                        <a href="Proyecto-cluster.pdf" target="_blank" class="project-link">
-                            Ver Documentación →
-                        </a>
-                    </article>
-                    
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">🎣</span>
-                            <h4>Anti-Phishing Campaign</h4>
-                        </div>
-                        <p>Diseño y ejecución de campañas de phishing con GoPhish, incluyendo configuración SMTP, análisis de resultados y reportes de concienciación.</p>
-                        <div class="project-tags">
-                            <span class="tag">GoPhish</span>
-                            <span class="tag">Phishing</span>
-                            <span class="tag">Awareness</span>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">🔎</span>
-                            <h4>Data Leak Detection</h4>
-                        </div>
-                        <p>Sistema automatizado para detección de fugas de información mediante técnicas OSINT, análisis de metadatos y monitorización de paste sites.</p>
-                        <div class="project-tags">
-                            <span class="tag">OSINT</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">DLP</span>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">📝</span>
-                            <h4>Log Correlation Scripts</h4>
-                        </div>
-                        <p>Scripts en Python y Bash para automatización de análisis forense de logs, correlación de eventos y generación de reportes de incidentes.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Bash</span>
-                            <span class="tag">Forensics</span>
-                        </div>
-                    </article>
-                </div>
+
+            <div class="projects-subtitle">
+                <span class="projects-category-label">BLUE TEAM — Defensa y detección</span>
             </div>
-            
-            <div class="projects-category">
-                <h3 class="category-title">
-                    <span class="category-icon red">⚔️</span>
-                    RED TEAM - CTF Write-ups
-                </h3>
-                
-                <div class="projects-grid">
-                    <article class="project-card ctf-card">
-                        <div class="project-header">
-                            <span class="project-icon">💀</span>
-                            <h4>DarkHole:1 CTF</h4>
-                            <span class="difficulty medium">Media</span>
-                        </div>
-                        <p>Explotación completa incluyendo enumeración web, SQL injection, escalada mediante binarios SUID y análisis de servicios internos.</p>
-                        <div class="project-tags">
-                            <span class="tag">SQLi</span>
-                            <span class="tag">SUID</span>
-                            <span class="tag">PrivEsc</span>
-                        </div>
-                        <a href="1765199442034_write-up.pdf" target="_blank" class="project-link">
-                            Ver Write-up →
-                        </a>
-                    </article>
-                    
-                    <article class="project-card ctf-card">
-                        <div class="project-header">
-                            <span class="project-icon">🧠</span>
-                            <h4>Psycho:1 CTF</h4>
-                            <span class="difficulty medium">Media</span>
-                        </div>
-                        <p>Máquina con enumeración exhaustiva, explotación LFI, análisis de logs y escalada mediante scripts con permisos especiales.</p>
-                        <div class="project-tags">
-                            <span class="tag">LFI</span>
-                            <span class="tag">Log Analysis</span>
-                            <span class="tag">PrivEsc</span>
-                        </div>
-                        <a href="write-up-psycho.pdf" target="_blank" class="project-link">
-                            Ver Write-up →
-                        </a>
-                    </article>
-                </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card project-featured">
+                    <div class="project-label">DESTACADO</div>
+                    <h3 class="project-title">Wazuh SIEM · Detección MITRE ATT&CK</h3>
+                    <p class="project-description">
+                        Laboratorio completo de Wazuh SIEM con endpoint Metasploitable3 monitorizado y Kali Linux
+                        como máquina ofensiva. Detección de técnicas MITRE ATT&CK (T1046, T1078, T1548.003, T1562.001),
+                        gestión de 22 CVEs con priorización CVSS, reglas personalizadas XML e integración con VirusTotal API.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Wazuh</span>
+                        <span class="tag">MITRE ATT&CK</span>
+                        <span class="tag">VirusTotal API</span>
+                        <span class="tag">CVSS</span>
+                        <span class="tag">Threat Detection</span>
+                    </div>
+                    <a href="https://github.com/juanrc98" target="_blank" rel="noopener" class="project-link">
+                        Ver en GitHub →
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <h3 class="project-title">High Availability Cluster</h3>
+                    <p class="project-description">
+                        Clúster de alta disponibilidad con Pacemaker y Corosync sobre Linux, con balanceo de carga
+                        MariaDB y failover automático.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Pacemaker</span>
+                        <span class="tag">Corosync</span>
+                        <span class="tag">HA</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                    <a href="Proyecto-cluster.pdf" target="_blank" rel="noopener" class="project-link">
+                        Ver documentación →
+                    </a>
+                </article>
+
+                <article class="project-card project-in-progress">
+                    <div class="project-label project-label-wip">EN DESARROLLO</div>
+                    <h3 class="project-title">Microsoft Sentinel Lab · KQL & MITRE</h3>
+                    <p class="project-description">
+                        Laboratorio cloud-native en Azure con ingesta de logs Windows/Linux, 5 reglas analíticas KQL
+                        mapeadas a técnicas MITRE ATT&CK y validación con generación controlada de eventos.
+                        Preparación práctica para la certificación SC-200.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Microsoft Sentinel</span>
+                        <span class="tag">KQL</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">SC-200</span>
+                    </div>
+                </article>
+
             </div>
-            
-            <span class="section-tag section-tag-end">&lt;/projects&gt;</span>
+
+            <div class="projects-subtitle">
+                <span class="projects-category-label">RED TEAM — CTF write-ups</span>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card project-ctf">
+                    <div class="project-difficulty">Dificultad: Media</div>
+                    <h3 class="project-title">DarkHole:1</h3>
+                    <p class="project-description">
+                        Enumeración web, SQL injection, escalada de privilegios mediante binarios SUID
+                        y análisis de servicios internos.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">SQLi</span>
+                        <span class="tag">SUID</span>
+                        <span class="tag">PrivEsc</span>
+                    </div>
+                    <a href="write-up.pdf" target="_blank" rel="noopener" class="project-link">
+                        Ver write-up →
+                    </a>
+                </article>
+
+                <article class="project-card project-ctf">
+                    <div class="project-difficulty">Dificultad: Media</div>
+                    <h3 class="project-title">Psycho:1</h3>
+                    <p class="project-description">
+                        Enumeración exhaustiva, explotación LFI, análisis de logs y escalada de privilegios
+                        mediante scripts con permisos especiales.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">LFI</span>
+                        <span class="tag">Log Analysis</span>
+                        <span class="tag">PrivEsc</span>
+                    </div>
+                    <a href="write-up-2.pdf" target="_blank" rel="noopener" class="project-link">
+                        Ver write-up →
+                    </a>
+                </article>
+
+            </div>
         </div>
     </section>
 
     <section id="certs" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;certifications&gt;</span>
+                <span class="section-number">05</span>
                 <h2 class="section-title">Certificaciones</h2>
+                <div class="section-line"></div>
             </div>
-            
+
             <div class="certs-grid">
-                <a href="https://www.credly.com/badges/ad3204d9-e927-4383-8dc3-4a181659a195/linked_in_profile" target="_blank" class="cert-card">
-                    <div class="cert-badge">
-                        <span class="cert-icon">🛡️</span>
-                    </div>
-                    <div class="cert-info">
-                        <h3>CompTIA Security+</h3>
-                        <p class="cert-issuer">CompTIA</p>
-                        <p class="cert-date">Nov 2025 - Nov 2028</p>
-                        <span class="cert-status verified">✓ Completado</span>
-                    </div>
-                    <span class="cert-link-icon">↗</span>
+
+                <a href="https://www.credly.com/badges/ad3204d9-e927-4383-8dc3-4a181659a195/linked_in_profile"
+                   target="_blank" rel="noopener" class="cert-card">
+                    <div class="cert-status-bar status-active"></div>
+                    <h3 class="cert-name">CompTIA Security+</h3>
+                    <p class="cert-issuer">CompTIA · SY0-701</p>
+                    <p class="cert-date">Nov 2025 → Nov 2028</p>
+                    <span class="cert-badge cert-verified">Verificada</span>
                 </a>
-                
-                <a href="https://certs.ine.com/e9a35620-16fe-47f8-b9d2-a25223872fc6#acc.eNKv169G" target="_blank" class="cert-card">
-                    <div class="cert-badge">
-                        <span class="cert-icon">⚔️</span>
-                    </div>
-                    <div class="cert-info">
-                        <h3>eJPTv2</h3>
-                        <p class="cert-issuer">INE Security (eLearnSecurity)</p>
-                        <p class="cert-date">Dic 2025 - Dic 2028</p>
-                        <span class="cert-status verified">✓ Completado</span>
-                    </div>
-                    <span class="cert-link-icon">↗</span>
+
+                <a href="https://certs.ine.com/e9a35620-16fe-47f8-b9d2-a25223872fc6#acc.eNKv169G"
+                   target="_blank" rel="noopener" class="cert-card">
+                    <div class="cert-status-bar status-active"></div>
+                    <h3 class="cert-name">eJPTv2</h3>
+                    <p class="cert-issuer">INE Security · Junior Penetration Tester</p>
+                    <p class="cert-date">Dic 2025 → Dic 2028</p>
+                    <span class="cert-badge cert-verified">Verificada</span>
                 </a>
-                
+
                 <div class="cert-card">
-                    <div class="cert-badge">
-                        <span class="cert-icon">🔐</span>
-                    </div>
-                    <div class="cert-info">
-                        <h3>Google Cybersecurity</h3>
-                        <p class="cert-issuer">Google / Coursera</p>
-                        <p class="cert-date">Professional Certificate</p>
-                        <span class="cert-status verified">✓ Completado</span>
-                    </div>
+                    <div class="cert-status-bar status-active"></div>
+                    <h3 class="cert-name">Google Cybersecurity</h3>
+                    <p class="cert-issuer">Google / Coursera</p>
+                    <p class="cert-date">Professional Certificate</p>
+                    <span class="cert-badge cert-verified">Completada</span>
                 </div>
-                
-                <div class="cert-card in-progress">
-                    <div class="cert-badge">
-                        <span class="cert-icon">☁️</span>
-                    </div>
-                    <div class="cert-info">
-                        <h3>AZ-500</h3>
-                        <p class="cert-issuer">Microsoft Azure Security Engineer</p>
-                        <p class="cert-date">Expected 2025</p>
-                        <span class="cert-status progress">⏳ In Progress</span>
-                    </div>
+
+                <div class="cert-card">
+                    <div class="cert-status-bar status-progress"></div>
+                    <h3 class="cert-name">Microsoft SC-200</h3>
+                    <p class="cert-issuer">Security Operations Analyst</p>
+                    <p class="cert-date">Examen previsto: Junio 2026</p>
+                    <span class="cert-badge cert-progress">En preparación</span>
                 </div>
+
             </div>
-            
-            <div class="certs-roadmap">
-                <h3 class="roadmap-title">📚 Próximos Objetivos</h3>
+
+            <div class="roadmap">
+                <h3 class="roadmap-title">Próximos objetivos</h3>
                 <div class="roadmap-items">
                     <div class="roadmap-item">
-                        <span class="roadmap-icon">🎯</span>
-                        <span>BTL1 (Blue Team Level 1)</span>
+                        <span class="roadmap-marker"></span>
+                        <div>
+                            <strong>AZ-104</strong> · Microsoft Azure Administrator
+                            <span class="roadmap-time">Q4 2026</span>
+                        </div>
                     </div>
                     <div class="roadmap-item">
-                        <span class="roadmap-icon">🎯</span>
-                        <span>CompTIA CySA+</span>
-                    </div>
-                    <div class="roadmap-item">
-                        <span class="roadmap-icon">🎯</span>
-                        <span>SC-200</span>
+                        <span class="roadmap-marker"></span>
+                        <div>
+                            <strong>AZ-500</strong> · Microsoft Azure Security Engineer
+                            <span class="roadmap-time">2027</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <span class="section-tag section-tag-end">&lt;/certifications&gt;</span>
         </div>
     </section>
 
-    <section id="contact" class="section section-dark">
+    <section id="contact" class="section section-alt">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;contact&gt;</span>
+                <span class="section-number">06</span>
                 <h2 class="section-title">Contacto</h2>
+                <div class="section-line"></div>
             </div>
-            
+
             <div class="contact-content">
-                <p class="contact-intro">
-                    ¿Interesado en colaborar o tienes una oportunidad? <br>
-                    <strong>¡Hablemos!</strong>
+                <p class="contact-lead">
+                    ¿Buscas un analista junior de ciberseguridad o tienes una oportunidad que encaje con mi perfil?
+                    Me encantaría hablar contigo.
                 </p>
-                
+
                 <div class="contact-grid">
                     <a href="mailto:juanrodcas98@gmail.com" class="contact-card">
-                        <span class="contact-icon">📧</span>
                         <span class="contact-label">Email</span>
                         <span class="contact-value">juanrodcas98@gmail.com</span>
                     </a>
-                    
+
                     <a href="tel:+34640103050" class="contact-card">
-                        <span class="contact-icon">📱</span>
                         <span class="contact-label">Teléfono</span>
                         <span class="contact-value">+34 640 103 050</span>
                     </a>
-                    
-                    <a href="https://www.linkedin.com/in/juan-rodriguez-castellano/" target="_blank" class="contact-card">
-                        <span class="contact-icon">💼</span>
+
+                    <a href="https://www.linkedin.com/in/juan-rodriguez-castellano/" target="_blank" rel="noopener" class="contact-card">
                         <span class="contact-label">LinkedIn</span>
-                        <span class="contact-value">Juan Rodríguez</span>
+                        <span class="contact-value">/in/juan-rodriguez-castellano</span>
                     </a>
-                    
-                    <a href="https://github.com/juanrc98" target="_blank" class="contact-card">
-                        <span class="contact-icon">💻</span>
+
+                    <a href="https://github.com/juanrc98" target="_blank" rel="noopener" class="contact-card">
                         <span class="contact-label">GitHub</span>
                         <span class="contact-value">@juanrc98</span>
                     </a>
                 </div>
-                
+
                 <div class="contact-cta">
-                    <a href="CV_Juan_Rodríguez_Castellano.pdf" download class="btn btn-primary btn-lg">
-                        <span class="btn-icon">↓</span> Descargar CV Completo
+                    <a href="CV_JuanRodriguezCastellano.pdf" download class="btn btn-primary btn-lg">
+                        Descargar CV completo (PDF)
                     </a>
                 </div>
             </div>
-            
-            <span class="section-tag section-tag-end">&lt;/contact&gt;</span>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">
-                    <span class="prompt">$</span> echo "© 2025 Juan Rodríguez Castellano"
-                </p>
-                <p class="footer-subtext">
-                    Diseñado con ☕ y pasión por la ciberseguridad
-                </p>
+                <p>© 2026 Juan Rodríguez Castellano · Córdoba, España</p>
+                <p class="footer-meta">Analista Junior de Ciberseguridad · SOC & Microsoft Security</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 

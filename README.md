@@ -37,7 +37,20 @@ Analista Junior de Ciberseguridad con formación en ASIR y experiencia práctica
 - **Scripting:** Bash · Python (básico) · PowerShell (básico)
 - **Frameworks:** MITRE ATT&CK · NIST CSF · ISO 27001 · ENS · OWASP Top 10
 
-## 📂 Proyectos destacados
+## 🗂️ Estructura del repositorio
+
+```
+juanrc98.github.io/
+├── index.html                         # Página principal
+├── style.css                          # Estilos
+├── script.js                          # Interacciones
+├── CV_JuanRodriguezCastellano.pdf     # CV en PDF
+├── Proyecto-cluster.pdf               # Documentación HA Cluster
+├── write-up.pdf                       # CTF DarkHole:1
+├── write-up-2.pdf                     # CTF Psycho:1
+├── README.md                          # Este archivo
+└── License
+```
 
 ### Blue Team — Defensa y detección
 

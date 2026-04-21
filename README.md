@@ -1,176 +1,97 @@
-# Cybersecurity Portfolio - Juan Rodríguez Castellano
+# Juan Rodríguez Castellano — Cybersecurity Portfolio
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Deployed](https://img.shields.io/badge/Live-juanrc98.github.io-4f8cff)](https://juanrc98.github.io)
 
-Portfolio personal de ciberseguridad con estética terminal/hacker, mostrando proyectos, certificaciones y experiencia en Blue Team y Red Team.
+Portfolio personal de **ciberseguridad**, centrado en operaciones SOC, SIEM, Microsoft Security y Cloud Security en Azure.
 
-##  Características
+Recoge mi experiencia profesional, competencias técnicas, laboratorios propios, write-ups de CTF y certificaciones.
 
--  **Diseño Terminal Matrix**: Animación de lluvia de caracteres estilo Matrix
--  **Blue Team Projects**: Proyectos de defensa, SIEM, monitorización y respuesta a incidentes
--  **Red Team Write-ups**: Documentación de explotación de máquinas CTF
--  **Responsive Design**: Adaptado para todos los dispositivos
--  **Animaciones Suaves**: Efectos de typing, hover y transiciones
--  **Tema Cyberpunk**: Colores verde neón sobre fondo oscuro
+## 🔗 Portfolio en vivo
 
-##  Demo
+**https://juanrc98.github.io**
 
-Visita el portfolio en vivo: https://juanrc98.github.io/
+## 👤 Sobre mí
 
-##  Estructura del Proyecto
-```
-Cibersecurity-portfolio/
-├── index.html              # Estructura principal del sitio
-├── style.css               # Estilos y diseño
-├── script.js               # Animaciones y efectos interactivos
-├── write-up-darkhole.pdf   # Write-up CTF DarkHole:1
-├── write-up-psycho.pdf     # Write-up CTF Psycho:1
-├── Proyecto-cluster.pdf    # Documentación de cluster HA
-├── README.md               # Este archivo
-└── LICENSE                 # Licencia del proyecto
-```
+Analista Junior de Ciberseguridad con formación en ASIR y experiencia práctica en operaciones SOC 24/7 y despliegue de infraestructura Microsoft en entorno corporativo.
 
-##  Tecnologías Utilizadas
+- **Ubicación:** Córdoba, España
+- **Disponibilidad:** Inmediata · Turnos 24/7 · Movilidad nacional
+- **Idiomas:** Español (nativo) · Inglés (B2)
 
-- **HTML5**: Estructura semántica
-- **CSS3**: Diseño responsive y animaciones
-- **JavaScript**: Efectos interactivos (Matrix rain, typing effect)
-- **GitHub Pages**: Hosting del portfolio
+## 🛡️ Experiencia profesional
 
-##  Secciones
+| Rol | Empresa | Periodo |
+|-----|---------|---------|
+| Técnico de Soporte TI — Proyecto migración Microsoft 365 | ECOINTEGRAL INGENIERÍA, SL | Mar 2026 — Actualidad |
+| Analista de Ciberseguridad — SOC N1 (prácticas) | IaaS365 | Mar 2025 — Jun 2025 |
+| Técnico Informático | Fersoft Informática | Oct 2025 — Dic 2025 |
 
-###  Inicio
-Terminal animado con efecto de escritura y presentación principal.
+## 🧰 Stack técnico
 
-###  Sobre Mí
-Información profesional, ubicación, idiomas y certificaciones.
+- **SIEM & Monitoring:** LogPoint · Wazuh · Microsoft Sentinel · Splunk (básico)
+- **EDR / XDR:** Trend Micro Vision One · Cynet XDR
+- **Cloud Security (Azure):** Microsoft Sentinel · Defender for Cloud · Microsoft Entra ID · KQL
+- **Identity & Access:** Microsoft Entra ID · Active Directory · Windows Autopilot · RBAC
+- **Vulnerability & Threat Intel:** Nessus · OpenVAS · CVSS · VirusTotal · OSINT
+- **Scripting:** Bash · Python (básico) · PowerShell (básico)
+- **Frameworks:** MITRE ATT&CK · NIST CSF · ISO 27001 · ENS · OWASP Top 10
 
-###  Educación
-- **Técnico Superior en ASIR** (2023-2025)
-- **Curso Intensivo de Ciberseguridad Andalucía Emplea+** (Oct 2025)
+## 📂 Proyectos destacados
 
-### Experiencia
-Timeline con experiencia laboral en:
-- **Analista SOC - IaaS365** (Mar 2025 - Jun 2025)
-- **Técnico Informático - Fersoft Informática** (Oct 2025 - Dic 2025)
+### Blue Team — Defensa y detección
 
-###  Habilidades
-Categorías organizadas:
-- SIEM & Monitoring
-- EDR/XDR & Response
-- Networking & Security
-- Automation & Scripting
-- Systems & Infrastructure
-- Security Tools
+**Wazuh SIEM · Detección MITRE ATT&CK**
+Laboratorio completo de Wazuh SIEM con endpoint Metasploitable3 y Kali Linux como máquina ofensiva. Detección de técnicas MITRE ATT&CK (T1046, T1078, T1548.003, T1562.001), gestión de 22 CVEs con priorización CVSS, reglas personalizadas XML e integración con VirusTotal API.
 
-###  Blue Team
-Proyectos de seguridad defensiva:
-- Wazuh SIEM Implementation
-- High Availability Cluster
-- Anti-Phishing Campaign
-- Data Leak Detection System
-- Log Correlation Scripts
+**High Availability Cluster**
+Clúster de alta disponibilidad con Pacemaker y Corosync sobre Linux, con balanceo de carga MariaDB y failover automático. Documentado en [`Proyecto-cluster.pdf`](./Proyecto-cluster.pdf).
 
-###  Red Team
-Write-ups de máquinas CTF:
-- DarkHole:1 (Dificultad: Media)
-- Psycho:1 (Dificultad: Media)
+**Microsoft Sentinel Lab** *(en desarrollo)*
+Laboratorio cloud-native en Azure con ingesta de logs Windows/Linux, 5 reglas analíticas KQL mapeadas a MITRE ATT&CK y validación con generación controlada de eventos. Preparación práctica para SC-200.
 
-###  Certificaciones
-- CompTIA Security+ (Completada)
-- Google Cybersecurity Professional Certificate (Completada)
-- eJPT - eLearnSecurity (En progreso)
+### Red Team — CTF write-ups
 
-###  Contacto
-- Email: juanrodcas98@gmail.com
-- Teléfono: +34 640 103 050
-- GitHub: [@juanrc98](https://github.com/juanrc98)
-- LinkedIn: [Juan Rodríguez](https://www.linkedin.com/in/juan-rodriguez-castellano/)
+- **DarkHole:1** — Enumeración web, SQLi, escalada SUID. [`write-up.pdf`](./write-up.pdf)
+- **Psycho:1** — LFI, análisis de logs, escalada con scripts privilegiados. [`write-up-2.pdf`](./write-up-2.pdf)
 
-##  Personalización
+## 🎓 Certificaciones
 
-### Colores
-El esquema de colores puede modificarse en `style.css`:
-```css
-/* Color principal */
-color: #00ff00; /* Verde Matrix */
-background: #0a0a0a; /* Negro profundo */
-```
+| Certificación | Emisor | Estado |
+|---------------|--------|--------|
+| CompTIA Security+ (SY0-701) | CompTIA | ✅ Nov 2025 — Nov 2028 |
+| eJPTv2 — Junior Penetration Tester | INE Security | ✅ Dic 2025 — Dic 2028 |
+| Google Cybersecurity Professional Certificate | Google / Coursera | ✅ Completada |
+| Microsoft SC-200 — Security Operations Analyst | Microsoft | 🟡 En preparación (Jun 2026) |
 
-### Animaciones
-La velocidad del efecto Matrix se puede ajustar en `script.js`:
-```javascript
-setInterval(drawMatrix, 35); // Cambiar el valor (ms)
-```
+**Próximos objetivos:** AZ-104 (Q4 2026) · AZ-500 (2027)
 
-##  Instalación Local
+## 🗂️ Estructura del repositorio
+## 🛠️ Tecnologías del sitio
 
-1. **Clona el repositorio:**
+- **HTML5** — Estructura semántica
+- **CSS3** — Diseño responsive, modo oscuro, sin frameworks
+- **JavaScript vanilla** — Interacciones ligeras
+- **GitHub Pages** — Hosting
+
+## 💻 Ejecución local
+
 ```bash
-git clone https://github.com/juanrc98/Cibersecurity-portfolio.git
-```
+# Clonar el repositorio
+git clone https://github.com/juanrc98/juanrc98.github.io.git
+cd juanrc98.github.io
 
-2. **Navega al directorio:**
-```bash
-cd Cibersecurity-portfolio
-```
-
-3. **Abre el archivo HTML:**
-```bash
-# En Linux/Mac
-open index.html
-
-# En Windows
-start index.html
-```
-
-O usa un servidor local:
-```bash
-# Con Python 3
+# Abrir con servidor local (opcional)
 python -m http.server 8000
-
-# Con Node.js (http-server)
-npx http-server
+# Luego abre http://localhost:8000
 ```
 
-##  Modificaciones
+## 📫 Contacto
 
-### Añadir Nuevo Proyecto Blue Team
-Edita `index.html` en la sección `#projects` → Blue Team:
-```html
-<div class="project-card">
-    <h3>[ Título del Proyecto ]</h3>
-    <p>Descripción del proyecto...</p>
-    <a href="enlace" target="_blank" class="btn">Ver más →</a>
-</div>
-```
-
-### Añadir Nuevo Write-up Red Team
-Edita `index.html` en la sección `#projects` → Red Team:
-```html
-<div class="project-card" onclick="window.open('writeup.pdf', '_blank')" style="cursor: pointer;">
-    <h3>[ Nombre CTF ]</h3>
-    <span style="...">DIFICULTAD: Media</span>
-    <p>Descripción...</p>
-    <div style="margin: 1rem 0;">
-        <span class="skill-tag">Tag1</span>
-        <span class="skill-tag">Tag2</span>
-    </div>
-    <div class="btn">Ver Write-up →</div>
-</div>
-```
-
-##  Autor
-
-**Juan Rodríguez Castellano**
-- Portfolio: [juanrc98.github.io](https://juanrc98.github.io/Cibersecurity-portfolio/)
-- GitHub: [@juanrc98](https://github.com/juanrc98)
-- LinkedIn: [Juan Rodríguez](https://www.linkedin.com/in/juan-rodriguez-castellano/)
-- Email: juanrodcas98@gmail.com
+- **Email:** juanrodcas98@gmail.com
+- **LinkedIn:** [linkedin.com/in/juan-rodriguez-castellano](https://www.linkedin.com/in/juan-rodriguez-castellano/)
+- **GitHub:** [@juanrc98](https://github.com/juanrc98)
 
 ---
 
- **Si te gusta este proyecto, dale una estrella en GitHub!**
-```
-root@cybersec:~# Juan Rodríguez © 2025 | Cybersecurity Portfolio
-```
+© 2026 Juan Rodríguez Castellano · Analista Junior de Ciberseguridad · Córdoba, España
